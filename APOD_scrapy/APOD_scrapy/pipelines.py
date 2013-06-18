@@ -13,6 +13,48 @@ from scrapy.contrib.pipeline.images import ImagesPipeline
 from scrapy.exceptions import DropItem
 from scrapy.http import Request
 
+import sys
+import MySQLdb
+import hashlib
+
+class guardadoSQLPipeline(object):
+    
+    def __init__(self):
+        self.conn =  MySQLdb.connect(host='localhost', user='vencejo',passwd='vencejo', db='DB_ASTRONOMICA', charset="utf8", use_unicode=True)
+        self.cursor = self.conn.cursor()
+    
+    def process_item(self, item, spider):  
+    
+        # La cadena de la fecha se transforma al formato SQL (YYYY-MM-DD)
+        fecha = self.adaptarFecha(item['fecha'])
+        try:
+            self.cursor.execute("""INSERT INTO IMAGENES (Titulo, Fecha, Explicacion, Ruta, Favorita)  
+                            VALUES (%s, %s,%s, %s,%s)""", 
+                           (item['titulo'], 
+                            fecha,
+                            item['explicacion'],
+                            item['image_paths'][0],
+                            'FALSE'))
+
+            self.conn.commit()
+
+
+        except MySQLdb.Error, e:
+            print "Error %d: %s" % (e.args[0], e.args[1])
+
+        return item
+        
+    def adaptarFecha(self, fecha):
+        """ transforma una fecha del tipo '2013 June 26' en '2013-06-26' que es el formato oficial MySQL """
+        (year, month, day) = fecha.split()
+        
+        listaMeses = ['January','February','March','April','May','June','July','August','September','October','November','December']
+    
+        month = listaMeses.index(month) + 1
+        
+        return year + '-' + str(month) + '-' + day    
+        
+    
 class guardadoXMLPipeline(object):
 
     def __init__(self):
