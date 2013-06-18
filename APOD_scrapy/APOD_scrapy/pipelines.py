@@ -20,7 +20,7 @@ import hashlib
 class guardadoSQLPipeline(object):
     
     def __init__(self):
-        self.conn =  MySQLdb.connect(host='localhost', user='vencejo',passwd='vencejo', db='DB_ASTRONOMICA', charset="utf8", use_unicode=True)
+        self.conn =  MySQLdb.connect(host='localhost', user='vencejo',passwd='vencejo', db='DBchorra', charset="utf8", use_unicode=True)
         self.cursor = self.conn.cursor()
     
     def process_item(self, item, spider):  
@@ -28,7 +28,7 @@ class guardadoSQLPipeline(object):
         # La cadena de la fecha se transforma al formato SQL (YYYY-MM-DD)
         fecha = self.adaptarFecha(item['fecha'])
         try:
-            self.cursor.execute("""INSERT INTO IMAGENES (Titulo, Fecha, Explicacion, Ruta, Favorita)  
+            self.cursor.execute("""INSERT INTO Imagenes (Titulo, Fecha, Explicacion, Ruta, Favorita)  
                             VALUES (%s, %s,%s, %s,%s)""", 
                            (item['titulo'], 
                             fecha,
