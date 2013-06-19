@@ -4,7 +4,8 @@
 
 import MySQLdb
 from gi.repository import Gtk
-import os, sys
+import os, sys, subprocess
+import constantes
 
 def creaDb(nombreDB, usuario, password):
     """ Funcion encargada de Crear la base de datos"""
@@ -37,14 +38,25 @@ class Db:
         self.conexion = MySQLdb.connect(host, user,passwd, db)
         # Creamos el cursor
         self.cursor = self.conexion.cursor()
-        # Inicializamos la base de datos
-        self.initDB()
-
+        # Marcamos el identificador activo
+        self.identificador = 1
         
-    def initDB(self):
-        """ Inicializa la base de datos mediante una llamada a scrapy"""
+    def get_identificador(self):
+        return self.identificador
         
-        pass
+    def set_identificador(self,valor):
+        """ Pone el nuevo valor del identificador (id) solo si este esta dentro de los margenes """
+        if (0 < valor) and (valor <= self.get_numero_imagenes()):
+            self.identificador = valor
+        
+    def get_numero_imagenes(self):
+        """devuelve el numero de imagenes guardadas en la BD"""
+        query = "SELECT  COUNT(*) FROM Imagenes ;"
+        self.cursor.execute(query)
+        self.conexion.commit()
+        registro = self.cursor.fetchone()
+        
+        return int(registro[0])
        
     def deleteDB(self):
         """ Borra todos los registros de la base de datos """
@@ -75,3 +87,183 @@ class Db:
         query = "UPDATE Imagenes SET Favorita = {0} WHERE id = {1} ;".format(favorita,str(identificador))
         self.cursor.execute(query)
         self.conexion.commit()
+        
+
+        
+#--------------------------------------------------
+# Clase encargada de gestionar la interfaz grafica
+#--------------------------------------------------    
+class GUI:
+
+    def __init__(self):
+        self.builder = Gtk.Builder()
+        self.builder.add_from_file("gui.glade")
+        self.handlers = {"onDeleteWindow": self.onDeleteWindow ,
+                         "onOpenAbout": self.onOpenAbout,
+                         "onCloseAbout": self.onCloseAbout,
+                         "onAdelanteClick" : self.onAdelanteClick,
+                         "onAtrasClick" : self.onAtrasClick,
+                         "onFavoritaClick" : self.onFavoritaClick,
+                         "initDBconScrapy" : self.initDBconScrapy,
+                         "onImagenClick" : self.mostrarImagenGrande,
+                         "onCloseImagenGrande" : self.onCloseImagenGrande, 
+                         "editarConGimp" : self.editarConGimp,
+                         }
+        self.builder.connect_signals(self.handlers)
+        self.window = self.builder.get_object("window1")
+        self.ventanaImagenGrande = self.builder.get_object("dialog1")
+        self.ventanaImagenGrande.hide()
+        self.spinner = self.builder.get_object("spinner1")
+        self.imagenesDescargadas = False
+        self.rutaImagen = ""
+        
+        image = self.builder.get_object("image1")
+        image.set_from_file('portada.jpg')
+        
+        self.window.show_all()
+        self.spinner.hide()
+        # Establecemos la conexión con la base de datos
+        self.tabla = Db(host='localhost', user='vencejo',passwd='vencejo', db='DBchorra')
+        self.pantallaInicial()
+        #self.tabla.deleteDB()   #Borro cualquier tabla guardada previamente
+        
+    def initDBconScrapy(self, *args):
+        """ Inicializa la base de datos mediante una llamada a scrapy que descarga los datos de la web y los vuelca en la BD"""
+        
+        if not self.imagenesDescargadas :
+            self.imagenesDescargadas = True
+            self.spinner.show()
+            self.spinner.start()
+            
+            statusBar = self.builder.get_object("statusbar1")
+            context_id = statusBar.get_context_id("aviso")
+            statusBar.pop(context_id)
+            statusBar.push(context_id, "Realizando  la descarga, espere por favor")
+            self.window.show_all()
+            statusBar.show()
+                        
+            os.chdir(constantes.rutaDeScrapy)
+            subprocess.call('scrapy crawl APOD_scrapySpider', shell=True)
+            
+            statusBar.pop(context_id)
+            statusBar.push(context_id, "Imagenes correctamente descargadas, ya puede empezar la visualizacion")
+            statusBar.show()
+            self.spinner.stop()
+            self.spinner.hide()
+
+    def pantallaInicial(self):
+        
+        image = self.builder.get_object("image1")
+       
+        textview = self.builder.get_object("textview1")
+        textview.set_wrap_mode(Gtk.WrapMode.WORD)
+        explicacion = textview.get_buffer()
+        explicacion.set_text('Visor APOD')
+        image.set_from_file('portada.jpg')
+        
+    def poblarItemsGUI(self, registro):
+        """Rellena los campos del GUI con los datos del registro """
+        
+        #Obtengo los objetos del GUI  
+        image = self.builder.get_object("image1")
+        titulo = self.builder.get_object("entry1")
+        fecha = self.builder.get_object("entry2")
+        textview = self.builder.get_object("textview1")
+        textview.set_wrap_mode(Gtk.WrapMode.WORD)
+        explicacion = textview.get_buffer()
+        ident = self.builder.get_object("entry4")
+        favorita = self.builder.get_object("entry5")
+        
+        #Relleno los objetos del GUI con los datos del registro
+        ident.set_text(str(registro[0]))
+        titulo.set_text(str(registro[1]))
+        fecha.set_text(str(registro[2]))
+        texto_plano = str(registro[3])
+        explicacion.set_text(texto_plano)
+        if str(registro[5]) == '0':
+            favorita.set_text('No lo es')
+        else:
+            favorita.set_text('Lo es')
+            
+        self.rutaImagen = str(registro[4])
+        ruta =  constantes.rutaImagenesMedianas + self.rutaImagen[4:]
+        image.set_from_file(ruta)
+        
+    def onAdelanteClick(self, *args):
+        """Al pulsar en el boton adelante avanzamos en la BD """
+        #Aumento el id de la tabla de la BD
+        ident = self.tabla.get_identificador()
+        self.tabla.set_identificador(ident + 1)
+        #Consultamos la BD
+        registro = self.tabla.obtener(self.tabla.get_identificador())
+        #actualizo el GUI con los datos
+        self.poblarItemsGUI(registro)
+        
+    def onAtrasClick(self, *args):
+        """Al pulsar en el boton atras retrocedemos en la BD """
+        #Aumento el id de la tabla de la BD
+        ident = self.tabla.get_identificador()
+        self.tabla.set_identificador(ident - 1)
+        #Consultamos la BD
+        registro = self.tabla.obtener(self.tabla.get_identificador())
+        #actualizo el GUI con los datos
+        self.poblarItemsGUI(registro)
+        
+    def onFavoritaClick(self, *args):
+        """Marca una imagen como favorita si no lo es y la desmarca en caso contrario"""
+        favorita = self.builder.get_object("entry5")
+        
+        if favorita.get_text() == 'No lo es':
+            self.tabla.marcaFavorita(self.tabla.get_identificador(), True)
+            favorita.set_text('Lo es')
+        else:
+            self.tabla.marcaFavorita(self.tabla.get_identificador(), False)
+            favorita.set_text('No lo es')
+            
+    def mostrarImagenGrande(self, *args):
+        
+        if self.rutaImagen:
+            
+            imagenGrande = self.builder.get_object("imagenGrande")
+            ruta =  constantes.rutaImagenesGrandes + self.rutaImagen 
+            imagenGrande.set_from_file(ruta)
+            self.ventanaImagenGrande.show_all()
+            
+    def onCloseImagenGrande(self, *args):
+        self.ventanaImagenGrande.hide()
+        
+    def editarConGimp(self, *args):
+        
+        if self.rutaImagen:
+            ruta =  constantes.rutaImagenesGrandes + self.rutaImagen
+            comando = 'gimp ' + ruta
+            subprocess.call(comando, shell=True)
+        
+    def onDeleteWindow(self, *args):
+        Gtk.main_quit
+        sys.exit()
+        
+    def onOpenAbout(self, *args):
+        about = self.builder.get_object("aboutdialog1")
+        about.show_all()
+
+    def onCloseAbout(self, *args):
+        about = self.builder.get_object("aboutdialog1")
+        about.hide()
+
+    
+
+
+def main():
+
+    #La siguiente linea solo es necesaria la primera vez que se ejecute el programa, para crear la Bd
+    #passwd = raw_input('Introduce tu clave de administrador para poder crear la base de datos: ')
+    #creaDb(passwd)
+    
+    app = GUI()
+    Gtk.main()
+    return 0
+    
+if __name__ == '__main__':
+    sys.exit(main())
+

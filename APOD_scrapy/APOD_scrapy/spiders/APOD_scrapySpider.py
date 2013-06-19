@@ -11,7 +11,7 @@ class APOD_scrapySpider(CrawlSpider):
     start_urls = ['http://apod.nasa.gov'] # url de inicio de busqueda para la spider
 
     # Analiza solo los post con estructura r'^ap\d{6}'
-    rules = (Rule(SgmlLinkExtractor(allow=[r'/apod/ap\d+\.html']),callback='analizaEntrada',follow= True) ,
+    rules = (Rule(SgmlLinkExtractor(allow=[r'/apod/ap\d+\.html']),callback='analizaEntrada',follow= False) ,
     )           
 
 

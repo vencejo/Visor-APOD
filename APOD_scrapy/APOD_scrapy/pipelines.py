@@ -17,6 +17,8 @@ import sys
 import MySQLdb
 import hashlib
 
+import re
+
 class guardadoSQLPipeline(object):
     
     def __init__(self):
@@ -27,12 +29,13 @@ class guardadoSQLPipeline(object):
     
         # La cadena de la fecha se transforma al formato SQL (YYYY-MM-DD)
         fecha = self.adaptarFecha(item['fecha'])
+        texto = self.htmlAtexto(item['explicacion'])
         try:
             self.cursor.execute("""INSERT INTO Imagenes (Titulo, Fecha, Explicacion, Ruta, Favorita)  
                             VALUES (%s, %s,%s, %s,%s)""", 
                            (item['titulo'], 
                             fecha,
-                            item['explicacion'],
+                            texto,
                             item['image_paths'][0],
                             'FALSE'))
 
@@ -53,6 +56,17 @@ class guardadoSQLPipeline(object):
         month = listaMeses.index(month) + 1
         
         return year + '-' + str(month) + '-' + day    
+        
+    def htmlAtexto(self, data):       
+        """Funcion auxiliar para transformar un texto html en otro plano si etiquetas """
+        # borra los saltos de linea
+        data = data.replace("\n", " ")
+       
+        # borra todas las etiquetas html
+        p = re.compile(r'<[^<]*?>')
+        data = p.sub('', data)
+      
+        return data
         
     
 class guardadoXMLPipeline(object):

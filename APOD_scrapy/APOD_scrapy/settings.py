@@ -16,6 +16,9 @@ ITEM_PIPELINES = ['APOD_scrapy.pipelines.MyImagesPipeline',
                   'APOD_scrapy.pipelines.guardadoXMLPipeline',
                     ]
 
-IMAGES_STORE = '/home/dj/Escritorio/Proyecto final curso/Pruebas/prueba_scrapy_mysql/APOD_scrapy/imagenesDescargadas'
+IMAGES_STORE = '/home/dj/Escritorio'
+IMAGES_THUMBS = {
+    'medianas': (600, 400),
+}
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'APOD_scrapy (http://osl.ugr)'
