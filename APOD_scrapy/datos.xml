@@ -1,44 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <items><item><explicacion>&lt;p&gt;
 
-&lt;b&gt; Explanation: &lt;/b&gt; 
-What, in heaven, is that?  
-
-Sometimes &lt;a href="http://www.aas.org/education/career.html"&gt;astronomers&lt;/a&gt; see things on the sky they 
-&lt;a href="ap990928.html"&gt;don't immediately understand&lt;/a&gt;.  
-
-In 1985 this happened to 
-&lt;a href="http://heritage.stsci.edu/2002/19/bio/bio_gomez_english.html"&gt;Arturo Gomez&lt;/a&gt;, and the object became known as Gomez's 
-&lt;a href="http://www.lib.ucdavis.edu/exhibits/food/panel6.html"&gt;Hamburger&lt;/a&gt; for its distinctive yet familiar shape.  
-
-After some investigation, the object was identified as a 
-&lt;a href="http://www.astro.washington.edu/palen/Research/nsf/intro.html"&gt;proto-planetary nebula&lt;/a&gt;, a gas cloud emitted by a 
-&lt;a href="sun.html"&gt;Sun&lt;/a&gt;-like star just after its central 
-&lt;a href="http://pearl1.lanl.gov/periodic/elements/1.html"&gt;hydrogen&lt;/a&gt; fuel has all been 
-&lt;a href="http://casswww.ucsd.edu/physics/ph7/StevI.html"&gt;fused&lt;/a&gt; to 
-&lt;a href="http://pearl1.lanl.gov/periodic/elements/2.html"&gt;helium&lt;/a&gt;.  
-
-Gomez's Hamburger is on its 
-&lt;a href="http://instruct1.cit.cornell.edu/courses/astro101/java/evolve/evolve.htm"&gt;way&lt;/a&gt; to becoming a full-fledged 
-&lt;a href="http://www.seds.org/messier/planetar.html"&gt;planetary nebula&lt;/a&gt; 
-in a few thousand years.  
-
-The light seen (the bun) is 
-&lt;a href="reflection_nebulae.html"&gt;reflected&lt;/a&gt; by 
-&lt;a href="ap990509.html"&gt;dust&lt;/a&gt; from the central star, 
-although the star itself is obscured by a thick
-&lt;a href="ap000208.html"&gt;dust disk&lt;/a&gt; that 
-runs across the middle (the patty).  
-
-&lt;a href="http://adsbit.harvard.edu/cgi-bin/nph-iarticle_query?bibcode=1987ApJ...316L..21R"&gt;Gomez's Hamburger&lt;/a&gt;, 
-&lt;a href="http://heritage.stsci.edu/2002/19/table.html"&gt;pictured above&lt;/a&gt; in a recent image from the 
-&lt;a href="ap010806.html"&gt;Hubble Space Telescope&lt;/a&gt;, 
-is only a fraction of a 
-&lt;a href="http://www.howstuffworks.com/question94.htm"&gt;light year&lt;/a&gt; across but located approximately 
-10,000 light years away towards the &lt;a href="http://www.astro.wisc.edu/~dolan/constellations/constellations/Sagittarius.html"&gt;constellation of Sagittarius&lt;/a&gt;.
-
-&lt;/p&gt;</explicacion><ruta_imagen><value>image/0208/hamburger_hst.jpg</value></ruta_imagen><fecha>2002 August 7</fecha><image_urls><value>http://apod.nasa.gov/apod/image/0208/hamburger_hst.jpg</value></image_urls><image_paths><value>full/2c959a1960d7629706396dae5967e5bd5447871c.jpg</value></image_paths><titulo> Gomez's Hamburger: A Proto-Planetary Nebula </titulo></item><item><explicacion>&lt;p&gt;
-
 &lt;b&gt; Explanation: &lt;/b&gt;
 
 &lt;a href="http://www.seds.org/messier/m/m065.html"&gt;M65 is&lt;/a&gt; a big,
@@ -116,6 +78,44 @@ trio's estimated distance of 30 million light-years.
 
 
 &lt;/p&gt;</explicacion><ruta_imagen><value>image/1108/leotriplet_vst_900.jpg</value></ruta_imagen><fecha>2011 August 3 </fecha><image_urls><value>http://apod.nasa.gov/apod/image/1108/leotriplet_vst_900.jpg</value></image_urls><image_paths><value>full/421216d5d118ad8f4b4a8d360690aabc65e5c749.jpg</value></image_paths><titulo> The Leo Triplet Galaxies from VST </titulo></item><item><explicacion>&lt;p&gt;
+
+&lt;b&gt; Explanation: &lt;/b&gt; 
+What, in heaven, is that?  
+
+Sometimes &lt;a href="http://www.aas.org/education/career.html"&gt;astronomers&lt;/a&gt; see things on the sky they 
+&lt;a href="ap990928.html"&gt;don't immediately understand&lt;/a&gt;.  
+
+In 1985 this happened to 
+&lt;a href="http://heritage.stsci.edu/2002/19/bio/bio_gomez_english.html"&gt;Arturo Gomez&lt;/a&gt;, and the object became known as Gomez's 
+&lt;a href="http://www.lib.ucdavis.edu/exhibits/food/panel6.html"&gt;Hamburger&lt;/a&gt; for its distinctive yet familiar shape.  
+
+After some investigation, the object was identified as a 
+&lt;a href="http://www.astro.washington.edu/palen/Research/nsf/intro.html"&gt;proto-planetary nebula&lt;/a&gt;, a gas cloud emitted by a 
+&lt;a href="sun.html"&gt;Sun&lt;/a&gt;-like star just after its central 
+&lt;a href="http://pearl1.lanl.gov/periodic/elements/1.html"&gt;hydrogen&lt;/a&gt; fuel has all been 
+&lt;a href="http://casswww.ucsd.edu/physics/ph7/StevI.html"&gt;fused&lt;/a&gt; to 
+&lt;a href="http://pearl1.lanl.gov/periodic/elements/2.html"&gt;helium&lt;/a&gt;.  
+
+Gomez's Hamburger is on its 
+&lt;a href="http://instruct1.cit.cornell.edu/courses/astro101/java/evolve/evolve.htm"&gt;way&lt;/a&gt; to becoming a full-fledged 
+&lt;a href="http://www.seds.org/messier/planetar.html"&gt;planetary nebula&lt;/a&gt; 
+in a few thousand years.  
+
+The light seen (the bun) is 
+&lt;a href="reflection_nebulae.html"&gt;reflected&lt;/a&gt; by 
+&lt;a href="ap990509.html"&gt;dust&lt;/a&gt; from the central star, 
+although the star itself is obscured by a thick
+&lt;a href="ap000208.html"&gt;dust disk&lt;/a&gt; that 
+runs across the middle (the patty).  
+
+&lt;a href="http://adsbit.harvard.edu/cgi-bin/nph-iarticle_query?bibcode=1987ApJ...316L..21R"&gt;Gomez's Hamburger&lt;/a&gt;, 
+&lt;a href="http://heritage.stsci.edu/2002/19/table.html"&gt;pictured above&lt;/a&gt; in a recent image from the 
+&lt;a href="ap010806.html"&gt;Hubble Space Telescope&lt;/a&gt;, 
+is only a fraction of a 
+&lt;a href="http://www.howstuffworks.com/question94.htm"&gt;light year&lt;/a&gt; across but located approximately 
+10,000 light years away towards the &lt;a href="http://www.astro.wisc.edu/~dolan/constellations/constellations/Sagittarius.html"&gt;constellation of Sagittarius&lt;/a&gt;.
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/0208/hamburger_hst.jpg</value></ruta_imagen><fecha>2002 August 7</fecha><image_urls><value>http://apod.nasa.gov/apod/image/0208/hamburger_hst.jpg</value></image_urls><image_paths><value>full/2c959a1960d7629706396dae5967e5bd5447871c.jpg</value></image_paths><titulo> Gomez's Hamburger: A Proto-Planetary Nebula </titulo></item><item><explicacion>&lt;p&gt;
 
 &lt;b&gt; Explanation: &lt;/b&gt;
 

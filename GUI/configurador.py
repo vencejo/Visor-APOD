@@ -23,8 +23,6 @@ class Configurador:
         
         self.VentanaConfiguracion = self.builder.get_object("VentanaConfiguracion")
         
-        self.rutaImagen = ""
-        
         self.VentanaConfiguracion.show_all()
         
     def creaDb(self, nombreDB, usuario, password):
@@ -80,10 +78,7 @@ class Configurador:
                 config.write()
                 
                 #Modifica el archivo settings.py del scrapy para decirle donde tiene que guardar las imagenes
-                
-                        
-                filename = '/home/dj/Escritorio/Proyecto final curso/Pruebas/prueba_scrapy_mysqul_gui/APOD_scrapy/APOD_scrapy/settings.py'
-                
+                filename = config['rutaImagenes'][0:-3] + 'APOD_scrapy/APOD_scrapy/settings.py'
                 f = open(filename,"r")
                 lines = f.readlines()
                 f.close()
@@ -92,11 +87,6 @@ class Configurador:
                     if line.find('IMAGES_STORE') == -1:
                         f.write(line)
                 f.write('IMAGES_STORE =' + "\"" + config['rutaImagenes'] + "\"")
-                
-                #with open(filename, 'r') as f:
-                    #data = f.read()
-                #with open(filename, 'w') as f:
-                    #f.write(data.replace('IMAGES_STORE =', 'IMAGES_STORE =' + "\"" + config['rutaImagenes'] + "\""))
                 
                 #Notifica el exito de la operacion en la ventana
                 label.set_text("Base de Datos creada correctamente, ya puede cerrar esta ventana e inicar el visualizador")
