@@ -13,16 +13,29 @@ from scrapy.contrib.pipeline.images import ImagesPipeline
 from scrapy.exceptions import DropItem
 from scrapy.http import Request
 
-import sys
+import sys, os
 import MySQLdb
 import hashlib
-
 import re
+from configobj import ConfigObj
+
+rutaActual = os.getcwd() 
+
+rutaAconfiguracion = rutaActual[0:-12] + '/GUI/configuracion.ini'
+print ""
+print rutaAconfiguracion
+print ""
+
+config = ConfigObj(rutaAconfiguracion)
+
+usuario = str(config['usuarioDB'])
+password = str(config['passwordDB'])
+dataBase = str(config['nombreDB'])
 
 class guardadoSQLPipeline(object):
     
     def __init__(self):
-        self.conn =  MySQLdb.connect(host='localhost', user='vencejo',passwd='vencejo', db='DBchorra', charset="utf8", use_unicode=True)
+        self.conn =  MySQLdb.connect(host='localhost', user=usuario,passwd=password, db=dataBase, charset="utf8", use_unicode=True)
         self.cursor = self.conn.cursor()
     
     def process_item(self, item, spider):  

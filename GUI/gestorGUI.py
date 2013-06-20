@@ -1,37 +1,27 @@
 #!/usr/python
 # -*- coding: utf-8 -*-
 
-
 import MySQLdb
 from gi.repository import Gtk
 import os, sys, subprocess
-import constantes
+from configobj import ConfigObj
 
-def creaDb(nombreDB, usuario, password):
-    """ Funcion encargada de Crear la base de datos"""
-    try:
-        conexion = MySQLdb.connect(host='localhost', user='root' ,passwd = password)
-        cursor = conexion.cursor()
-        query = 'CREATE DATABASE ' + nombreDB
-        cursor.execute(query)
-        query = 'GRANT ALL ON ' + nombreDB + '.* ' +  'TO ' +  '\'' + usuario + '\'' + '@\'localhost\' ' + 'IDENTIFIED BY ' + '\'' + password +'\'' 
-        cursor.execute(query)
-        query = 'USE ' + nombreDB
-        cursor.execute(query)
-        query = """CREATE TABLE Imagenes (id INT NOT NULL AUTO_INCREMENT, Titulo VARCHAR(200),Fecha DATE,Explicacion VARCHAR(4000), Ruta VARCHAR(400),
-        Favorita BOOLEAN, PRIMARY KEY (id))"""
-        cursor.execute(query)
-        conexion.commit()
-    except :
-        print "Hay un problema con la creacion de la base de datos, puede que ya exista"
-        
+config = ConfigObj(r"configuracion.ini")
 
+BASEDATOS = config['nombreDB']
+USUARIO = config['usuarioDB']
+PASSWORD = config['passwordDB']
+
+RUTAIMAGENESGRANDES = config['rutaImagenes'] + "/"
+RUTAIMAGENESMEDIANAS = RUTAIMAGENESGRANDES + '/thumbs/medianas/'
+RUTADESCRAPY = config['rutaImagenes'][0:-3] + 'APOD_scrapy'
+ 
 #--------------------------------------------------
 # Clase encargada de gestionar la Base de datos
 #--------------------------------------------------
 
 class Db:
-
+    
     def __init__(self,host,user,passwd,db):
 
         # Establecemos la conexión
@@ -88,14 +78,13 @@ class Db:
         self.cursor.execute(query)
         self.conexion.commit()
         
-
-        
 #--------------------------------------------------
 # Clase encargada de gestionar la interfaz grafica
 #--------------------------------------------------    
 class GUI:
 
     def __init__(self):
+                
         self.builder = Gtk.Builder()
         self.builder.add_from_file("gui.glade")
         self.handlers = {"onDeleteWindow": self.onDeleteWindow ,
@@ -110,6 +99,7 @@ class GUI:
                          "editarConGimp" : self.editarConGimp,
                          }
         self.builder.connect_signals(self.handlers)
+        
         self.window = self.builder.get_object("window1")
         self.ventanaImagenGrande = self.builder.get_object("dialog1")
         self.ventanaImagenGrande.hide()
@@ -120,31 +110,33 @@ class GUI:
         image = self.builder.get_object("image1")
         image.set_from_file('portada.jpg')
         
+         # Establecemos la conexión con la base de datos
+        self.tabla = Db(host='localhost', user=USUARIO,passwd=PASSWORD, db=BASEDATOS)
+        
         self.window.show_all()
-        self.spinner.hide()
-        # Establecemos la conexión con la base de datos
-        self.tabla = Db(host='localhost', user='vencejo',passwd='vencejo', db='DBchorra')
-        self.pantallaInicial()
-        #self.tabla.deleteDB()   #Borro cualquier tabla guardada previamente
+    
         
     def initDBconScrapy(self, *args):
         """ Inicializa la base de datos mediante una llamada a scrapy que descarga los datos de la web y los vuelca en la BD"""
         
         if not self.imagenesDescargadas :
+            
+             # Aviso del inicio de la descarga
             self.imagenesDescargadas = True
             self.spinner.show()
             self.spinner.start()
-            
             statusBar = self.builder.get_object("statusbar1")
             context_id = statusBar.get_context_id("aviso")
             statusBar.pop(context_id)
             statusBar.push(context_id, "Realizando  la descarga, espere por favor")
             self.window.show_all()
             statusBar.show()
-                        
-            os.chdir(constantes.rutaDeScrapy)
+               
+            # Comienza el proceso de descarga en si
+            os.chdir(RUTADESCRAPY)
             subprocess.call('scrapy crawl APOD_scrapySpider', shell=True)
             
+            # Aviso del fin de la descarga
             statusBar.pop(context_id)
             statusBar.push(context_id, "Imagenes correctamente descargadas, ya puede empezar la visualizacion")
             statusBar.show()
@@ -152,7 +144,7 @@ class GUI:
             self.spinner.hide()
 
     def pantallaInicial(self):
-        
+        """ Muestra la pantalla inicial de bienvenida en el visor """
         image = self.builder.get_object("image1")
        
         textview = self.builder.get_object("textview1")
@@ -186,7 +178,7 @@ class GUI:
             favorita.set_text('Lo es')
             
         self.rutaImagen = str(registro[4])
-        ruta =  constantes.rutaImagenesMedianas + self.rutaImagen[4:]
+        ruta =  RUTAIMAGENESMEDIANAS + self.rutaImagen[4:]
         image.set_from_file(ruta)
         
     def onAdelanteClick(self, *args):
@@ -225,7 +217,7 @@ class GUI:
         if self.rutaImagen:
             
             imagenGrande = self.builder.get_object("imagenGrande")
-            ruta =  constantes.rutaImagenesGrandes + self.rutaImagen 
+            ruta =  RUTAIMAGENESGRANDES + self.rutaImagen 
             imagenGrande.set_from_file(ruta)
             self.ventanaImagenGrande.show_all()
             
@@ -235,7 +227,7 @@ class GUI:
     def editarConGimp(self, *args):
         
         if self.rutaImagen:
-            ruta =  constantes.rutaImagenesGrandes + self.rutaImagen
+            ruta =  RUTAIMAGENESGRANDES + self.rutaImagen
             comando = 'gimp ' + ruta
             subprocess.call(comando, shell=True)
         
@@ -253,12 +245,7 @@ class GUI:
 
     
 
-
 def main():
-
-    #La siguiente linea solo es necesaria la primera vez que se ejecute el programa, para crear la Bd
-    #passwd = raw_input('Introduce tu clave de administrador para poder crear la base de datos: ')
-    #creaDb(passwd)
     
     app = GUI()
     Gtk.main()

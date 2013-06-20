@@ -1,11 +1,6 @@
 *.py[cod]
 *.~
 
-#Images
-*.jpeg
-*.jpg
-*.png
-
 # C extensions
 *.so
 
