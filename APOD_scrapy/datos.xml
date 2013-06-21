@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items><item><explicacion>&lt;p&gt;
+<items><item><explicacion>&lt;p&gt; 
 
-&lt;b&gt; Explanation: &lt;/b&gt; 
-Today the &lt;a href="http://en.wikipedia.org/wiki/Winter_solstice"&gt;solstice&lt;/a&gt; occurs at 23:38
-&lt;a href="http://sunearth.gsfc.nasa.gov/eclipse/SEhelp/%0ATimeZone.html"&gt;Universal Time&lt;/a&gt;,
-the Sun reaching its southernmost 
-&lt;a href="http://en.wikipedia.org/wiki/Declination"&gt;declination&lt;/a&gt; in planet
-&lt;a href="http://www.astro.uiuc.edu/~kaler/celsph.html"&gt;Earth's sky&lt;/a&gt;.
+&lt;b&gt; Explanation: &lt;/b&gt;
 
-Of course, the
-&lt;a href="http://www.usno.navy.mil/USNO/astronomical-applications/astronomical-information-center/dark-days"&gt;December&lt;/a&gt;
-solstice marks
-&lt;a href="http://www.phy6.org/stargaze/Sseason.htm"&gt;the beginning of&lt;/a&gt;
-winter in the northern hemisphere and summer in the south.
+Today, the
+&lt;a href="http://en.wikipedia.org/wiki/Summer_solstice"&gt;solstice&lt;/a&gt;
+is at 05:04 &lt;a href="http://aa.usno.navy.mil/faq/docs/UT.php"&gt;Universal
+Time&lt;/a&gt;, the Sun reaching the northernmost 
+&lt;a href="http://en.wikipedia.org/wiki/Declination"&gt;declination&lt;/a&gt;
+in its yearly journey through planet
+&lt;a href="http://stars.astro.illinois.edu/celsph.html"&gt;Earth's sky&lt;/a&gt;.
 
-When viewed from northern latitudes, 
-and as shown in the above horizontally 
-&lt;a href="http://www.snakeriver4x4.com/pictures/M60A3%20crushed%20car-s.JPG"&gt;compressed&lt;/a&gt; image, the Sun will make its 
-&lt;a href="http://www.youtube.com/watch?v=MhqeJZekoKc"&gt;lowest arc&lt;/a&gt; 
-through the sky along the southern horizon.
+A June solstice marks
+&lt;a href="http://www.phy6.org/stargaze/Sseason.htm"&gt;the astronomical
+beginning of&lt;/a&gt; summer in the northern hemisphere and winter
+in the south.
 
-So in the north, the 
-&lt;a href="ap060621.html"&gt;solstice&lt;/a&gt; day has the shortest length of time between
-sunrise and sunset and fewest hours of daylight. 
+It also brings the north's longest day, the
+&lt;a href="http://astro.unl.edu/classaction/animations/coordsmotion/%0Adaylighthoursexplorer.html"&gt;longest period&lt;/a&gt;
+between sunrise and sunset.
 
-&lt;a href="http://www.danilopivato.com/miscellany/sequences_and_sunsets/%0Awinter_solstice.htm"&gt;This striking composite&lt;/a&gt; image follows the Sun's path through the December solstice day of 2005 in a beautiful blue
-sky, looking down the
-&lt;a href="http://en.wikipedia.org/wiki/Tyrrhenian_Sea"&gt;Tyrrhenian Sea&lt;/a&gt;
-coast from Santa Severa toward Fiumicino, Italy.
+&lt;a href="http://www.danilopivato.com/miscellany/sequences_and_sunset/%0As_severa_castle_selfportrait.html"&gt;This composite image&lt;/a&gt; follows the Sun's
+path toward the end of the June solstice day of 2012 as it approaches
+the western horizon in a colorful, clear sky.
 
-The view covers about 115 degrees in 43 separate, well-planned
-exposures from sunrise to sunset. 
+The scene looks north and west along the
+&lt;a href="ap101221.html"&gt;Tyrrhenian Sea coast&lt;/a&gt; from Santa Severa, Italy.
 
-&lt;/p&gt;</explicacion><ruta_imagen><value>image/1012/wintersolstice_pivato.jpg</value></ruta_imagen><fecha>2010 December 21 </fecha><image_urls><value>http://apod.nasa.gov/apod/image/1012/wintersolstice_pivato.jpg</value></image_urls><image_paths><value>full/af56cf5e0518f76d39341f4b4eff86cea9400962.jpg</value></image_paths><titulo> Tyrrhenian Sea and Solstice Sky </titulo></item><item><explicacion>&lt;p&gt; 
+Appearing in the well-timed sequence, the small figure of the
+photographer himself is illuminated against the wall of the
+&lt;a href="http://www.museosantasevera.org/%0Apagina132_pyrgi-e-il-castello.html"&gt;town's medieval castle&lt;/a&gt;.
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/sequence_pivato900.jpg</value></ruta_imagen><fecha>2013 June 21</fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/sequence_pivato900.jpg</value></image_urls><image_paths><value>full/90ed496bd4e5a9159d99efb36cbd392ebe86346a.jpg</value></image_paths><titulo> A Solstice Sunset Self Portrait </titulo></item><item><explicacion>&lt;p&gt; 
 
 &lt;b&gt; Explanation: &lt;/b&gt;
 
@@ -64,4 +63,522 @@ its cosmic neighbors are
 likely responsible for the extended flare and warp
 of this spiral's disk.
 
-&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/NGC3628Falesiedi950.jpg</value></ruta_imagen><fecha>2013 June 20</fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/NGC3628Falesiedi950.jpg</value></image_urls><image_paths><value>full/dc4a07c625913a0ba8d5d732041c5ea0ac379a75.jpg</value></image_paths><titulo> Edge-on NGC 3628 </titulo></item></items>
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/NGC3628Falesiedi950.jpg</value></ruta_imagen><fecha>2013 June 20</fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/NGC3628Falesiedi950.jpg</value></image_urls><image_paths><value>full/dc4a07c625913a0ba8d5d732041c5ea0ac379a75.jpg</value></image_paths><titulo> Edge-on NGC 3628 </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt; 
+The &lt;a href="http://antwrp.gsfc.nasa.gov/apod/ap950616.html"&gt;first APOD&lt;/a&gt; appeared eighteen years ago today, on 1995 June 16.  
+
+Although garnering only 14 pageviews on that day,
+&lt;a href="ap050616.html"&gt;we&lt;/a&gt; are proud to estimate that
+&lt;a href="http://en.wikipedia.org/wiki/APOD"&gt;APOD&lt;/a&gt; has now
+served over one &lt;i&gt;billion&lt;/i&gt; space-related images over the past eighteen years.  
+
+That early beginning, along with a nearly unchanging format, has allowed APOD to be a consistent and familiar site on a web frequently filled with change.   
+
+Many people don't know, though, that APOD is now
+&lt;a href="http://antwrp.gsfc.nasa.gov/apod/lib/about_apod.html"&gt;translated daily&lt;/a&gt; into many major languages.
+
+We again thank our readers, astrophotographers, and
+&lt;a href="http://www.nasa.gov/"&gt;NASA&lt;/a&gt;
+for their continued support, but ask that any
+potentially congratulatory e-mail go this year to the volunteers all around the world who translate
+&lt;a href="http://www.capjournal.org/issues/08/08_22.pdf"&gt;APOD&lt;/a&gt;'s captions daily, many times with considerable effort.
+
+Some &lt;a href="http://www.youtube.com/watch?v=a5yqorEHDaA"&gt;APOD&lt;/a&gt; images are featured in the above spectacular collage visualizing &lt;a href="http://www.reddit.com/r/IAmA/comments/19edw2/i_am_a_robert_nemiroff_from_nasas_astronomy/"&gt;APOD&lt;/a&gt; as a classic film reel, submitted by an
+&lt;a href="http://antwrp.gsfc.nasa.gov/apod/ap_faq.html"&gt;APOD&lt;/a&gt; enthusiast skilled in digital image manipulation. 
+
+&lt;a href="http://bb.nightskylive.net/asterisk/discuss_apod.php?date=130616"&gt;How many&lt;/a&gt; APOD images can you identify?  
+
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/apod18_letian_960.jpg</value></ruta_imagen><fecha>2013 June 16 </fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/apod18_letian_960.jpg</value></image_urls><image_paths><value>full/09965d81d558b468d0a824bc5e434357ea0a8043.jpg</value></image_paths><titulo> APOD Turns Eighteen </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt; 
+What creates these long and nearly straight grooves on Mars?
+
+Dubbed 
+&lt;a href="http://photojournal.jpl.nasa.gov/catalog/PIA17260"&gt;linear gullies&lt;/a&gt;, they appear on the sides of some sandy slopes during Martian spring, have nearly constant width, extend for as long as two kilometers, and have raised banks along their sides.
+
+Unlike most water flows, they do not appear to have areas of dried debris at the downhill end.
+
+A leading hypothesis -- actually 
+&lt;a href="https://www.youtube.com/watch?v=mNXBfz1iVzc"&gt;being tested&lt;/a&gt; here on Earth -- is that these linear gullies are caused by chunks of carbon dioxide ice 
+(&lt;a href="http://en.wikipedia.org/wiki/Dry_ice"&gt;dry ice&lt;/a&gt;) 
+breaking off and sliding down hills while 
+&lt;a href="http://en.wikipedia.org/wiki/Sublimation_(phase_transition)"&gt;sublimating&lt;/a&gt; into gas, eventually completely evaporating into thin air.
+
+If true, these natural 
+&lt;a href="https://www.youtube.com/watch?v=76CNkxizQuc"&gt;dry-ice&lt;/a&gt; sleds may well provide 
+&lt;a href="http://farm1.static.flickr.com/82/249729539_8ece634ed4.jpg"&gt;future adventurers&lt;/a&gt; a smooth ride on cushions of escaping carbon dioxide.
+
+The &lt;a href="http://www.jpl.nasa.gov/news/news.php?release=2013-200"&gt;above recently-released image&lt;/a&gt; was taken in 2006 by the 
+&lt;a href="http://hirise.lpl.arizona.edu/"&gt;HiRISE&lt;/a&gt; camera on board the 
+&lt;a href="http://www.nasa.gov/mission_pages/MRO/main/index.html"&gt;NASA&lt;/a&gt;'s 
+&lt;a href="http://en.wikipedia.org/wiki/Mars_Reconnaissance_Orbiter"&gt;Mars Reconnaissance Orbiter&lt;/a&gt; currently orbiting Mars.
+
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/lineargullies_hirise_960.jpg</value></ruta_imagen><fecha>2013 June 17 </fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/lineargullies_hirise_960.jpg</value></image_urls><image_paths><value>full/6b75b712ccf6e3441b3980366275c7d8621e6b46.jpg</value></image_paths><titulo> Dry Ice Sled Streaks on Mars </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt; 
+How many different astronomical phenomena have come together to create the above vista?
+
+Several. 
+
+First, in the foreground, is 
+&lt;a href="http://en.wikipedia.org/wiki/Crater_Lake"&gt;Crater Lake&lt;/a&gt; -- 
+a caldera created by volcanism on planet Earth about 7,700 years ago.
+
+Next, inside the lake, is water. 
+
+Although the origin of the water in the crater is melted snowfall, 
+the origin of water on Earth more generally is 
+&lt;a href="http://en.wikipedia.org/wiki/Origin_of_water_on_Earth"&gt;unclear&lt;/a&gt;, 
+but &lt;a href="http://www.nature.com/news/common-source-for-earth-and-moon-water-1.12963"&gt;possibly related&lt;/a&gt; to ancient Earthly-impacts of 
+&lt;a href="ap100726.html"&gt;icy bodies&lt;/a&gt;.
+
+Next, the green glow in the sky is 
+&lt;a href="http://en.wikipedia.org/wiki/Airglow"&gt;airglow&lt;/a&gt;, 
+light emitted by atoms high in the Earth's atmosphere as they recombine 
+at night after being separated during the day by energetic sunlight.
+
+The many points of light in the sky are stars, glowing by 
+&lt;a href="http://hyperphysics.phy-astr.gsu.edu/hbase/astro/astfus.html"&gt;nuclear fusion&lt;/a&gt;.  
+
+They are far above the atmosphere but 
+&lt;a href="http://www.atlasoftheuniverse.com/250lys.html"&gt;nearby to our Sun&lt;/a&gt; in the 
+&lt;a href="ap080606.html"&gt;Milky Way Galaxy&lt;/a&gt;.
+
+Finally, the &lt;a href="ap120911.html"&gt;bright arch&lt;/a&gt; across the image is the 
+&lt;a href="ap110710.html"&gt;central band&lt;/a&gt; of the Milky Way, 
+much further away, on the average, than the nearby stars, and 
+&lt;a href="ap120717.html"&gt;shaped mostly by gravity&lt;/a&gt;.
+
+Contrary to appearances, the Milky Way band glows by 
+itself and is not illuminated by the airglow.
+
+The above image is a six-frame panorama taken during about two weeks ago in 
+&lt;a href="http://en.wikipedia.org/wiki/Oregon"&gt;Oregon&lt;/a&gt;, 
+&lt;a href="http://en.wikipedia.org/wiki/United_States"&gt;USA&lt;/a&gt;.
+
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/mwskyglow_moore_960.jpg</value></ruta_imagen><fecha>2013 June 19 </fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/mwskyglow_moore_960.jpg</value></image_urls><image_paths><value>full/8092287d8ad29d083e4ff850627f25cfd9113a87.jpg</value></image_paths><titulo> Milky Way Over Crater Lake with Airglow </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt;
+
+Over a five hour period last Tuesday morning,
+exposures captured
+&lt;a href="http://spaceweather.com/gallery/%0Aindiv_upload.php?upload_id=83207"&gt;this tantalizing view&lt;/a&gt; of meteor
+streaks and the Milky Way in dark skies above
+Las Campanas Observatory in Chile.
+
+During that time, astronomers had hoped
+to see an outburst from the
+&lt;a href="http://www.npr.org/blogs/thetwo-way/2013/06/10/190495937/%0Athe-gamma-delphinids-are-coming-elusive-meteor-shower-tonight"&gt;gamma
+Delphinid meteor shower&lt;/a&gt;
+as Earth swept through the dust trail left
+&lt;a href="http://adsabs.harvard.edu/abs/2003Icar..162..443L"&gt;by an
+unknown comet&lt;/a&gt;.
+
+Named for the
+&lt;a href="ap121215.html"&gt;shower's radiant point&lt;/a&gt;
+in the constellation Delphinus,
+a brief but strong outburst was reported in bright,
+moonlit skies on June 10, 1930.
+
+While no strong Delphinid meteor activity was reported since,
+an outburst was tentatively predicted to occur
+&lt;a href="http://www.amsmeteors.org/2013/06/%0Aa-repeat-of-the-gamma-delphinid-outburst/"&gt;again in 2013&lt;/a&gt;.
+
+But even though Tuesday's skies were dark, the overall
+&lt;a href="http://www.amsmeteors.org/2013/06/%0Agamma-delphinid-results-and-observations/"&gt;rate of meteors&lt;/a&gt;
+in this field is low, and only the three lower meteor streaks
+seem to point back to the shower's estimated radiant. 
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/delphinids_lcBeletsky900.jpg</value></ruta_imagen><fecha>2013 June 15</fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/delphinids_lcBeletsky900.jpg</value></image_urls><image_paths><value>full/75f845b036952c57d57c22f64f26c13c756dac3e.jpg</value></image_paths><titulo> Delphinid Meteor Mystery </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt;
+
+&lt;a href="http://galaxymap.org/cgi-bin/sharpless.py?s=1"&gt;Sharpless&lt;/a&gt;
+115 stands just north and west of Deneb,
+the alpha star of Cygnus the Swan
+&lt;a href="ap101119.html"&gt;in planet Earth's skies&lt;/a&gt;.
+
+Noted in the
+&lt;a href="http://adsabs.harvard.edu/cgi-bin/nph-bib_query?%0Abibcode=1959ApJS....4..257S"&gt;1959 catalog&lt;/a&gt;
+by astronomer Stewart Sharpless (as Sh2-115)
+the faint but lovely emission nebula lies along the edge of one of the
+outer Milky Way's giant molecular clouds, about 7,500 light-years away.
+
+Shining with
+&lt;a href="http://en.wikipedia.org/wiki/H_II_region"&gt;the light of
+ionized atoms&lt;/a&gt; of hydrogen, sulfur, and oxygen
+in this Hubble palette color composite image, the nebular glow is
+powered by hot stars in star cluster Berkeley 90.
+
+The cluster stars are likely only 100 million years old or so and
+are still &lt;a href="ap070726.html"&gt;embedded in&lt;/a&gt; Sharpless 115.
+
+But the stars' strong winds and radiation have
+&lt;a href="http://cdsads.u-strasbg.fr/cgi-bin/nph-bib_query?%0A1980A%26A....89..140H&amp;amp;db_key=AST&amp;amp;nosetcookie=1"&gt;cleared away&lt;/a&gt;
+much of their dusty, natal cloud.
+
+At the emission nebula's estimated distance,
+&lt;a href="http://billsnyderastrophotography.com/?page_id=3367"&gt;this
+cosmic close-up&lt;/a&gt; spans just under 100 light-years.
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/Sh2-115EastSnyderScaled900.jpg</value></ruta_imagen><fecha>2013 June 14</fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/Sh2-115EastSnyderScaled900.jpg</value></image_urls><image_paths><value>full/b4161ffe693538c620a162cf0210349a53a34a55.jpg</value></image_paths><titulo> Sharpless 115 </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt;
+
+You can see four planets in
+&lt;a href="http://www.greeksky.gr/greeksky/slides/GreekSky14/album/slides/%0A20130525PlanetsKosIsland.htm"&gt;this serene sunset image&lt;/a&gt;,
+created from a series of stacked digital exposures captured
+near dusk on May 25.
+
+The composite picture follows the trail of three of them,
+Jupiter, Venus, and Mercury (left to right) dropping toward the
+western horizon, gathered close in last month's remarkable
+&lt;a href="http://science.nasa.gov/science-news/science-at-nasa/2013/%0A10may_sunsettriangle/"&gt;triple planetary conjunction&lt;/a&gt;.
+
+Similar in brightness to planet Mercury, the star
+&lt;a href="ap121009.html"&gt;Elnath&lt;/a&gt; (Beta Tauri)
+is also tracked across the scene, leaving its dotted trail
+still farther to the right.
+
+Of course, in the foreground are the
+still, shallow waters of Alikes salt lake, reflecting the striking colors of 
+sunset over Kos Island, Greece,
+&lt;a href="ap110618.html"&gt;planet Earth&lt;/a&gt;.
+
+For now, Jupiter has wandered into the glare of the setting Sun,
+but Mercury and Venus remain low in
+&lt;a href="http://shadowandsubstance.com/2013Venus/2013Venus"&gt;the west at
+twilight&lt;/a&gt;.
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/20130525PlanetsKosIsland.jpg</value></ruta_imagen><fecha>2013 June 13</fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/20130525PlanetsKosIsland.jpg</value></image_urls><image_paths><value>full/a6f15e61b3657f06cc95274edca1530f88b199c6.jpg</value></image_paths><titulo> Four Planet Sunset </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt; 
+What's happening in the NGC 3582 nebula? 
+
+&lt;a href="ap031227.html"&gt;Bright stars&lt;/a&gt; and &lt;a href="http://portal.acs.org/portal/acs/corg/content?_nfpb=true&amp;amp;_pageLabel=PP_ARTICLEMAIN&amp;amp;node_id=841&amp;amp;content_id=WPCP_008721&amp;amp;use_sec=true&amp;amp;sec_url_var=region1"&gt;interesting molecules&lt;/a&gt; are forming.
+
+The
+&lt;a href="http://www.atlasoftheuniverse.com/nebulae/ngc3576.html"&gt;complex
+nebula&lt;/a&gt; resides in the star forming region called RCW 57.  
+
+Visible in &lt;a href="http://www.deserthollowobservatory.com/p851643867/h5f503122#h5f503122"&gt;this image&lt;/a&gt; are dense knots of &lt;a href="ap050110.html"&gt;dark interstellar dust&lt;/a&gt;, 
+bright stars that have formed in the past few million years, fields of &lt;a href="emission_nebulae.html"&gt;glowing hydrogen gas&lt;/a&gt; 
+ionized by these stars, and 
+&lt;a href="ap990503.html"&gt;great loop&lt;/a&gt;s of gas expelled by dying stars.
+
+A &lt;a href="http://adsabs.harvard.edu/abs/2006A%26A...450..253M"&gt;detailed study of NGC 3582&lt;/a&gt;, also known as 
+&lt;a href="http://es.wikipedia.org/wiki/NGC_3584"&gt;NGC 3584&lt;/a&gt; and 
+&lt;a href="ap080326.html"&gt;NGC 3576&lt;/a&gt;, 
+uncovered at least 33 massive stars in the end stages of formation, 
+and the clear presence of the complex carbon molecules known as 
+&lt;a href="http://en.wikipedia.org/wiki/Polycyclic_aromatic_hydrocarbons"&gt;polycyclic aromatic hydrocarbons&lt;/a&gt; (PAHs).
+
+PAHs are thought to be created in the cooling gas of 
+&lt;a href="http://server7.wikisky.org/starview?object_type=3&amp;amp;object_id=218&amp;amp;object_name=NGC+3584&amp;amp;locale=EN"&gt;star forming region&lt;/a&gt;s, 
+and their development in the 
+&lt;a href="http://en.wikipedia.org/wiki/Formation_and_evolution_of_the_Solar_System"&gt;Sun's formation nebula&lt;/a&gt; five billion years 
+ago may have been an important step in the 
+&lt;a href="http://science.nasa.gov/planetary-science/big-questions/how-did-life-begin-and-evolve-on-earth-and-has-it-evolved-elsewhere-in-the-solar-system/"&gt;development of life&lt;/a&gt; on Earth.
+
+The 
+&lt;a href="http://www.deserthollowobservatory.com/p851643867/h5f503122#h5f503122"&gt;above image&lt;/a&gt; was taken at the Desert Hollow Observatory north of 
+&lt;a href="http://en.wikipedia.org/wiki/Phoenix,_Arizona"&gt;Phoenix&lt;/a&gt;, 
+&lt;a href="http://en.wikipedia.org/wiki/Arizona"&gt;Arizona&lt;/a&gt;, 
+&lt;a href="http://en.wikipedia.org/wiki/United_States"&gt;USA&lt;/a&gt;.
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/ngc3584_dho_960.jpg</value></ruta_imagen><fecha>2013 June 11 </fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/ngc3584_dho_960.jpg</value></image_urls><image_paths><value>full/eeb1b55e4296b033ddc4f8d3e7dd6cb7343d2ec7.jpg</value></image_paths><titulo> Star Forming Region NGC 3582 </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt; 
+Where are the hottest stars in the nearest galaxies?
+
+To help find out, NASA commissioned its Earth-orbiting Swift satellite to compile a 
+&lt;a href="http://www.youtube.com/watch?v=53yokIKAnDs"&gt;multi-image mosaic&lt;/a&gt; 
+of the neighboring 
+&lt;a href="ap130528.html"&gt;Large Magellanic Cloud&lt;/a&gt; (LMC) galaxy in ultraviolet light.
+
+The &lt;a href="http://www.nasa.gov/mission_pages/swift/bursts/magellanic-uv.html"&gt;above image&lt;/a&gt; shows where recently formed stars occur in the LMC, 
+as the most massive of these young stars shine brightly in blue and 
+&lt;a href="http://missionscience.nasa.gov/ems/10_ultravioletwaves.html"&gt;ultraviolet&lt;/a&gt;.
+
+In contrast, visible in an image 
+&lt;a href="http://s3-ec.buzzfed.com/static/enhanced/webdr02/2012/12/15/16/anigif_enhanced-buzz-3238-1355608787-1.gif"&gt;roll-over&lt;/a&gt;, 
+a more familiar view of the LMC in visible light better highlights older stars. 
+
+On the upper left is one of the largest star forming regions known in the entire 
+&lt;a href="http://en.wikipedia.org/wiki/Local_Group"&gt;Local Group&lt;/a&gt; of galaxies: the 
+&lt;a href="ap120516.html"&gt;Tarantula Nebula&lt;/a&gt;.
+
+The Large Magellanic Cloud and its smaller companion the 
+&lt;a href="ap100903.html"&gt;Small Magellanic Cloud&lt;/a&gt; are 
+&lt;a href="ap100514.html"&gt;easily visible&lt;/a&gt; with the unaided eye to 
+sky enthusiasts with a view of the southern sky.
+ 
+Detailed inspection of the 
+&lt;a href="http://www.nasa.gov/mission_pages/swift/bursts/magellanic-uv.html"&gt;above image&lt;/a&gt; is allowing a better galaxy-comprehensive picture for how 
+&lt;a href="http://en.wikipedia.org/wiki/Star_formation"&gt;star formation&lt;/a&gt; occurs.
+
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/lmc_swift_960.jpg</value></ruta_imagen><fecha>2013 June 10 </fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/lmc_swift_960.jpg</value></image_urls><image_paths><value>full/8793567a04eb64a67d6964aaaa14d0d4efced772.jpg</value></image_paths><titulo> The Large Magellanic Cloud in Ultraviolet </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt;
+
+Many bright nebulae and star clusters in planet Earth's sky
+are associated with the name of
+&lt;a href="http://messier.seds.org/xtra/history/m-cat.html"&gt;astronomer
+Charles Messier&lt;/a&gt;, from his famous 18th century catalog.
+
+&lt;a href="http://messier.seds.org/Messier/xtra/m-crater.html"&gt;His
+name is also given&lt;/a&gt; to these two large and remarkable craters
+on the Moon.
+
+Standouts in the dark, smooth lunar Sea of Fertility or Mare
+Fecunditatis,
+Messier (left) and Messier A have dimensions of 15 by 8
+and 16 by 11 kilometers respectively.
+
+Their elongated shapes are explained by
+an extremely shallow-angle trajectory followed by
+&lt;a href="http://lunar.arc.nasa.gov/education/activities/%0Aactive15a.htm"&gt;the impactor&lt;/a&gt;, moving left to right,
+&lt;a href="http://www.skyandtelescope.com/observing/objects/moon/%0A3304151.html"&gt;that gouged out the craters&lt;/a&gt;.
+
+The shallow impact also resulted in two
+&lt;a href="ap050305.html"&gt;bright rays&lt;/a&gt; of material
+extending along the surface to the right, beyond the picture.
+
+Intended to be viewed with
+&lt;a href="http://photojournal.jpl.nasa.gov/Help/%0AVendorList.html#Glasses"&gt;red/blue glasses&lt;/a&gt; (red for the left eye),
+this striking stereo picture of the crater pair was recently created
+from high resolution scans of two images
+(&lt;a href="http://www.lpi.usra.edu/resources/apollo/%0Aframe/?AS11-42-6304"&gt;AS11-42-6304&lt;/a&gt;,
+&lt;a href="http://www.lpi.usra.edu/resources/apollo/%0Aframe/?AS11-42-6305"&gt;AS11-42-6305&lt;/a&gt;)
+taken during the Apollo 11 mission to the moon.
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/MessierCrater3d_vantuyneC900.jpg</value></ruta_imagen><fecha>2013 June 8</fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/MessierCrater3d_vantuyneC900.jpg</value></image_urls><image_paths><value>full/39a03409d98a52cfb3f55e6ee5abc3665ec04040.jpg</value></image_paths><titulo> Messier Craters in Stereo </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt;
+
+The bright clusters and nebulae of planet Earth's night sky are often
+named for &lt;a href="ap120929.html"&gt;flowers&lt;/a&gt; or
+&lt;a href="ap100425.html"&gt;insects&lt;/a&gt;.
+
+Though its wingspan covers over 3 light-years,
+&lt;a href="http://en.wikipedia.org/wiki/NGC_6302"&gt;NGC 6302&lt;/a&gt; is no
+exception.
+
+With an estimated surface temperature of about 250,000 degrees C,
+the dying central star of this particular
+&lt;a href="ap040207.html"&gt;planetary nebula&lt;/a&gt; has become exceptionally
+hot, shining brightly in ultraviolet light but hidden from
+direct view by a dense torus of dust.
+ 
+This
+&lt;a href="http://internal.hubblesite.org/newscenter/archive/releases/%0A2009/25/image/f/"&gt;sharp and colorful close-up&lt;/a&gt;
+of the dying star's nebula was recorded
+in 2009 by the Hubble Space Telescope's Wide Field Camera 3,
+installed during the final
+&lt;a href="http://en.wikipedia.org/wiki/STS-125"&gt;shuttle servicing
+mission&lt;/a&gt;.
+
+Cutting across a bright cavity of ionized gas, the dust
+&lt;a href="http://www.math.tamu.edu/~tkiffe/calc3/revolution3/%0Arevolution3.html"&gt;torus&lt;/a&gt;
+surrounding the central star is near
+the center of this view, almost edge-on to the line-of-sight.
+
+Molecular hydrogen 
+&lt;a href="http://adsabs.harvard.edu/abs/2005hris.conf..423M"&gt;has been
+detected&lt;/a&gt; in the hot star's dusty cosmic shroud.
+
+&lt;a href="http://adsabs.harvard.edu/abs/2008MNRAS.385..269M"&gt;NGC 6302&lt;/a&gt; lies about 4,000 light-years away in the
+&lt;a href="http://www.arachnology.be/Arachnology.html"&gt;arachnologically&lt;/a&gt;
+correct constellation of the Scorpion 
+(&lt;a href="http://hawastsoc.org/deepsky/sco/index.html"&gt;Scorpius&lt;/a&gt;).
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/butterfly_hst.jpg</value></ruta_imagen><fecha>2013 June 7</fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/butterfly_hst.jpg</value></image_urls><image_paths><value>full/ad7524ea2d279e46a0149f7384c676c0d68a5fe2.jpg</value></image_paths><titulo> NGC 6302: The Butterfly Nebula </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt; 
+Few astronomical sights excite the imagination like the 
+nearby stellar nursery known as the Orion Nebula. 
+
+&lt;a href="ap130320.html"&gt;The Nebula&lt;/a&gt;'s glowing gas 
+surrounds hot young stars at the edge of an immense interstellar 
+&lt;a href="http://en.wikipedia.org/wiki/Molecular_cloud"&gt;molecular cloud&lt;/a&gt;. 
+
+Many of the filamentary structures visible in the 
+&lt;a href="http://www.atlasastronomia.com/astrofotografia/cesar/fotos_cesar/banda%20estrecha/M42_HaSHO_2000.jpg"&gt;above image&lt;/a&gt; are actually 
+&lt;a href="http://en.wikipedia.org/wiki/Shock_waves"&gt;shock waves&lt;/a&gt; - 
+fronts where fast moving material encounters slow moving gas. 
+
+The Orion Nebula spans about 40 
+&lt;a href="http://chandra.harvard.edu/photo/cosmic_distance.html"&gt;light years&lt;/a&gt; 
+and is located about 1500 light years away in the 
+&lt;a href="http://www.atlasoftheuniverse.com/5000lys.html"&gt;same spiral arm&lt;/a&gt; 
+of our Galaxy as the Sun. 
+
+The Great Nebula in 
+&lt;a href="ap121203.html"&gt;Orion can be found&lt;/a&gt; with the 
+unaided eye just below and to the left of the easily identifiable 
+&lt;a href="ap110121.html"&gt;belt of three stars&lt;/a&gt; in the popular constellation Orion. 
+
+The above image shows the nebula in three colors specifically emitted by 
+&lt;a href="http://periodic.lanl.gov/1.shtml"&gt;hydrogen&lt;/a&gt;, 
+&lt;a href="http://periodic.lanl.gov/8.shtml"&gt;oxygen&lt;/a&gt;, and 
+&lt;a href="http://periodic.lanl.gov/16.shtml"&gt;sulfur&lt;/a&gt; gas. 
+
+The &lt;a href="ap101023.html"&gt;whole Orion Nebula cloud complex&lt;/a&gt;, 
+which &lt;a href="ap120212.html"&gt;includes&lt;/a&gt; the 
+&lt;a href="ap130422.html"&gt;Horsehead Nebula&lt;/a&gt;, 
+will slowly disperse over the next 100,000 years.
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/m42HSO_gonzalez_960.jpg</value></ruta_imagen><fecha>2013 June 4 </fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/m42HSO_gonzalez_960.jpg</value></image_urls><image_paths><value>full/9e90a6e25c38ae0e9b6667ae6d361d2ca160fa99.jpg</value></image_paths><titulo> Orion Nebula in Oxygen, Hydrogen, and Sulfur </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt; 
+Could life ever have existed on Mars?
+
+To help find out, humanity landed the 
+&lt;a href="http://en.wikipedia.org/wiki/Curiosity_%28rover%29"&gt;Curiosity rover&lt;/a&gt; 
+on Mars last August.
+
+To make sure the car-sized explorer survived the interplanetary trip and 
+&lt;a href="ap120731.html"&gt;dramatic landing&lt;/a&gt; intact, the 
+&lt;a href="http://photojournal.jpl.nasa.gov/catalog/PIA16134"&gt;above image&lt;/a&gt; 
+and others was taken peering at, under, and around Curiosity.
+
+&lt;a href="http://photojournal.jpl.nasa.gov/catalog/PIA16134"&gt;Pictured above&lt;/a&gt; 
+in this unusual vista are three of Curiosity's six wheels, each measuring about half a meter across. 
+
+In recent months, &lt;a href="https://www.youtube.com/watch?v=B8OUL9QYNpI"&gt;Curiosity&lt;/a&gt; 
+has been exploring the surroundings of an area dubbed 
+&lt;a href="http://photojournal.jpl.nasa.gov/catalog/PIA16701"&gt;Yellowknife Bay&lt;/a&gt;.
+
+Analyses of data taken by 
+&lt;a href="http://mars.jpl.nasa.gov/msl/mission/instruments/"&gt;Curiosity's cameras and onboard laboratories&lt;/a&gt; has provided strong 
+&lt;a href="http://www.jpl.nasa.gov/news/news.php?release=2013-092"&gt;new evidence&lt;/a&gt; 
+that &lt;a href="http://www.sciencemag.org/content/339/6126/1373.full"&gt;Mars
+could once have supported life&lt;/a&gt;.
+
+In the distance is part of the slope to the central peak inside 
+&lt;a href="ap110729.html"&gt;Gale Crater&lt;/a&gt; that Curiosity is scheduled to attempt to climb -- 
+&lt;a href="ap120827.html"&gt;Mt. Sharp&lt;/a&gt;.
+
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/roverwheels_curiosity_960.jpg</value></ruta_imagen><fecha>2013 June 3 </fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/roverwheels_curiosity_960.jpg</value></image_urls><image_paths><value>full/5529723d025efd2836e52aa1eb8cb9529e465242.jpg</value></image_paths><titulo> Curiosity: Wheels on Mars </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt; 
+What kind of cloud is this?  
+
+A &lt;a href="http://weathersavvy.com/Q-Shelf_Roll_Clouds1.html"&gt;roll cloud&lt;/a&gt;.  
+
+These rare long clouds may form near advancing cold fronts.    
+
+In particular, a downdraft from an advancing storm front can cause moist warm air to rise, cool below its dew point, and so form
+&lt;a href="http://www.youtube.com/watch?v=hKI2Atj08Xk"&gt;a cloud&lt;/a&gt;.  
+
+When this happens uniformly along an extended front, a
+&lt;a href="http://en.wikipedia.org/wiki/Roll_cloud"&gt;roll cloud&lt;/a&gt; may form.  
+
+&lt;a href="ap090824.html"&gt;Roll clouds&lt;/a&gt;
+may actually have air circulating along the long horizontal axis of the cloud.  
+
+A &lt;a href="http://www.weatherscapes.com/album.php?cat=clouds&amp;amp;subcat=roll_cloud"&gt;roll cloud&lt;/a&gt; is not thought to be able to morph into a
+&lt;a href="ap050613.html"&gt;tornado&lt;/a&gt;.  
+
+Unlike a similar
+&lt;a href="ap080122.html"&gt;shelf cloud&lt;/a&gt;,
+ a roll cloud, a type of
+&lt;a href="http://en.wikipedia.org/wiki/Arcus_cloud"&gt;Arcus cloud&lt;/a&gt;,
+ is completely detached from their parent  
+&lt;a href="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/cld/cldtyp/vrt/cb.rxml"&gt;cumulonimbus&lt;/a&gt; cloud.  
+
+&lt;a href="http://commons.wikimedia.org/wiki/File:Roll-cloud.JPG"&gt;Pictured
+above&lt;/a&gt;, a
+&lt;a href="http://epod.usra.edu/blog/2006/04/lovelock-roll-cloud.html"&gt;roll cloud&lt;/a&gt; extends far into the distance in 2009 January
+above Las Olas Beach in
+&lt;a href="http://en.wikipedia.org/wiki/Maldonado_Department"&gt;Maldonado&lt;/a&gt;,
+&lt;a href="http://en.wikipedia.org/wiki/Uruguay"&gt;Uruguay&lt;/a&gt;. 
+
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/rollcloud_eberl_960.jpg</value></ruta_imagen><fecha>2013 June 2 </fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/rollcloud_eberl_960.jpg</value></image_urls><image_paths><value>full/cb34a42543f369440632f0efbc5daf6df7af1231.jpg</value></image_paths><titulo> A Roll Cloud Over Uruguay </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt;
+
+Except for the rings
+&lt;a href="http://saturn.jpl.nasa.gov/"&gt;of Saturn&lt;/a&gt;, 
+the &lt;a href="http://messier.seds.org/m/m057.html"&gt;Ring
+Nebula&lt;/a&gt; (M57) is probably the most famous celestial band.
+
+Its classic appearance is
+understood to be due to our own perspective, though.
+
+&lt;a href="http://hubblesite.org/newscenter/archive/releases/2013/13/%0Atext/"&gt;The recent mapping&lt;/a&gt; of the
+&lt;a href="http://arxiv.org/abs/1304.5233"&gt;expanding&lt;/a&gt; nebula's
+&lt;a href="http://hubblesite.org/newscenter/archive/releases/2013/13/%0Aimage/e/"&gt;3-D structure&lt;/a&gt;, based in part on
+&lt;a href="http://heritage.stsci.edu/2013/13/"&gt;this clear Hubble image&lt;/a&gt;,
+indicates that
+the nebula is a relatively dense, donut-like ring wrapped
+around the middle of a football-shaped cloud of glowing gas.
+
+The view from planet Earth looks down the long axis of the football,
+face-on to the ring.
+
+Of course, in this well-studied example of a
+&lt;a href="ap110218.html"&gt;planetary nebula&lt;/a&gt;, the glowing material
+&lt;a href="ap110901.html"&gt;does not&lt;/a&gt; come from planets.
+
+Instead, the gaseous shroud represents outer layers expelled
+from the dying,
+&lt;a href="http://www.astro.washington.edu/users/balick/WFPC2/"&gt;once
+sun-like star&lt;/a&gt;, now a tiny pinprick of light
+seen at the nebula's center.
+
+Intense ultraviolet light from the hot central star
+&lt;a href="http://hyperphysics.phy-astr.gsu.edu/hbase/%0Amod4.html#c3"&gt;ionizes atoms&lt;/a&gt; in the gas.
+
+In the picture, the blue color in the center is
+ionized helium, the cyan color of
+the inner ring is the glow of hydrogen and oxygen,
+and the reddish color of the outer ring is from nitrogen and sulfur.
+
+The Ring Nebula is about one light-year
+across and 2,000 light-years away.
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/m57_hst900c.jpg</value></ruta_imagen><fecha>2013 June 5</fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/m57_hst900c.jpg</value></image_urls><image_paths><value>full/e9e05cef7d6bfe732f07eacf91004304d92f6261.jpg</value></image_paths><titulo> M57: The Ring Nebula </titulo></item><item><explicacion>&lt;p&gt; 
+
+&lt;b&gt; Explanation: &lt;/b&gt;
+
+Have you ever hiked the
+&lt;a href="http://www.nps.gov/brca/planyourvisit/queensgarden.htm"&gt;Queen's
+Garden trail&lt;/a&gt; in Bryce Canyon, Utah, USA, planet Earth?
+
+Walking along that path in this dark night skyscape,
+you can almost imagine your journey continues along the pale,
+luminous Milky Way.
+
+Of course, the
+&lt;a href="http://en.wikipedia.org/wiki/%0AList_of_names_for_the_Milky_Way"&gt;name&lt;/a&gt; for our galaxy, the
+&lt;a href="http://seds.org/messier/more/mw.html"&gt;Milky Way&lt;/a&gt;
+(in Latin, Via Lactea), does refer to its appearance
+as a milky band or path in the sky.
+
+In fact, the word galaxy itself derives from the Greek for milk.
+
+Visible on moonless nights from
+&lt;a href="http://www.blue-marble.de/nightlights/2012"&gt;dark sky areas&lt;/a&gt;,
+though not so bright or quite so colorful as in this image,
+the &lt;a href="http://science.nasa.gov/headlines/y2001/%0Aast01nov_1.htm"&gt;glowing celestial band&lt;/a&gt;
+is due to the collective light of myriad stars along the
+plane of our galaxy, too faint to be distinguished individually.
+
+The diffuse starlight is cut by dark swaths of
+obscuring galactic dust clouds.
+
+Four hundred years ago, Galileo turned his
+telescope on the Milky Way and announced it to be
+
+"...
+&lt;a href="http://cosmology.carnegiescience.edu/timeline/1610/%0Acountless-stars"&gt;a congeries of innumerable stars&lt;/a&gt; ..."
+
+&lt;/p&gt;</explicacion><ruta_imagen><value>image/1306/BC-QueenTrail-Tree-950wp.jpg</value></ruta_imagen><fecha>2013 June 1</fecha><image_urls><value>http://apod.nasa.gov/apod/image/1306/BC-QueenTrail-Tree-950wp.jpg</value></image_urls><image_paths><value>full/4f278fe5b10bbc7f3d2b279da20534ad5992f00b.jpg</value></image_paths><titulo> The Milky Trail </titulo></item></items>

@@ -4,17 +4,36 @@ from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.selector import HtmlXPathSelector
 from APOD_scrapy.items import ApodScrapyItem
+from configobj import ConfigObj
+import os
 
+def creaCadenaDeConsulta():
+        
+        rutaActual = os.getcwd() 
+        rutaAconfiguracion = rutaActual[0:-12] + '/Configurador/configuracion.ini'
+        config = ConfigObj(rutaAconfiguracion)
 
+        mes = str(config['mes'])
+        year = str(config['year'])
+        
+        if mes == '' and year == '':
+            cadena = r'/apod/ap\d+\.html'
+        elif mes == '' and year != '':
+            cadena = r'/apod/ap' + year + '\d+\.html'
+        elif mes != '' and year != '':
+            cadena = r'/apod/ap' + year + mes + '\d\d\.html'
+        else:
+            "Configuracion de mes y año erronea "
+        
+        return cadena
+        
 class APOD_scrapySpider(CrawlSpider):
     name = 'APOD_scrapySpider'
     start_urls = ['http://apod.nasa.gov'] # url de inicio de busqueda para la spider
 
     # Analiza solo los post con estructura r'^ap\d{6}'  r'/apod/ap\130619\.html' r'/apod/ap\d+\.html'
-    
-    rules = (Rule(SgmlLinkExtractor(allow=[r'/apod/ap\d+\.html']),callback='analizaEntrada',follow= False) ,
+    rules = (Rule(SgmlLinkExtractor(allow=[creaCadenaDeConsulta()]),callback='analizaEntrada',follow= True) ,
     )           
-
 
     def analizaEntrada(self, response):
 
@@ -32,3 +51,8 @@ class APOD_scrapySpider(CrawlSpider):
             item['image_urls'] = []
     
         return item
+        
+    
+        
+        
+        

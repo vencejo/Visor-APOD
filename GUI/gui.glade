@@ -1,12 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <object class="GtkAboutDialog" id="aboutdialog1">
+    <property name="can_focus">False</property>
+    <property name="border_width">5</property>
+    <property name="type_hint">dialog</property>
+    <property name="program_name">Visor APOD</property>
+    <property name="version">v 1.0</property>
+    <property name="copyright" translatable="yes">Este obra está bajo una licencia de Creative Commons Reconocimiento 3.0 Unported.</property>
+    <property name="comments" translatable="yes">Visor de imagenes APOD (Astronomical Picture of the Day) con Python
+
+Este programa pretende crear un visor offline en un entorno Gtk Linux de imagenes descargadas del sitio oficial APOD de la nasa</property>
+    <property name="website">https://github.com/vencejo/Visor-APOD</property>
+    <property name="license" translatable="yes">Este obra está bajo una licencia de Creative Commons Reconocimiento 3.0 Unported.</property>
+    <property name="authors">Diego J. Martinez García - apussapus@gmail.com - guadatech</property>
+    <property name="documenters">Diego J. Martinez García - apussapus@gmail.com - guadatech</property>
+    <signal name="close" handler="onCloseAbout" swapped="no"/>
+    <signal name="response" handler="onCloseAbout" swapped="no"/>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="aboutdialog-vbox1">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="aboutdialog-action_area1">
+            <property name="can_focus">False</property>
+            <property name="valign">center</property>
+            <property name="layout_style">end</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
   <object class="GtkDialog" id="dialog1">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="type_hint">dialog</property>
     <signal name="close" handler="onCloseImagenGrande" swapped="no"/>
-    <signal name="response" handler="onCloseImagenGrande" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
         <property name="can_focus">False</property>
@@ -115,7 +154,42 @@
                         <property name="can_focus">False</property>
                         <property name="image">image3</property>
                         <property name="use_stock">False</property>
-                        <signal name="activate" handler="initDBconScrapy" swapped="no"/>
+                        <child type="submenu">
+                          <object class="GtkMenu" id="menu4">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <child>
+                              <object class="GtkMenuItem" id="menuitem6">
+                                <property name="use_action_appearance">False</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="label" translatable="yes">de este  mes</property>
+                                <property name="use_underline">True</property>
+                                <signal name="activate" handler="initDBconScrapy_Mes" swapped="no"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkMenuItem" id="menuitem7">
+                                <property name="use_action_appearance">False</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="label" translatable="yes">de este año</property>
+                                <property name="use_underline">True</property>
+                                <signal name="activate" handler="initDBconScrapy_Year" swapped="no"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkMenuItem" id="menuitem8">
+                                <property name="use_action_appearance">False</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="label" translatable="yes">de todo</property>
+                                <property name="use_underline">True</property>
+                                <signal name="activate" handler="initDBconScrapy_Todo" swapped="no"/>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
                       </object>
                     </child>
                     <child>
@@ -210,6 +284,7 @@
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
+                        <signal name="activate" handler="onOpenAbout" swapped="no"/>
                       </object>
                     </child>
                   </object>

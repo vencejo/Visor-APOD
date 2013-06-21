@@ -5,6 +5,7 @@ import MySQLdb
 from gi.repository import Gtk
 import os, sys, subprocess
 from configobj import ConfigObj
+import datetime
 
 rutaActual = os.getcwd() 
 rutaAconfiguracion = rutaActual[0:-3] + 'Configurador/configuracion.ini'
@@ -95,7 +96,9 @@ class GUI:
                          "onAdelanteClick" : self.onAdelanteClick,
                          "onAtrasClick" : self.onAtrasClick,
                          "onFavoritaClick" : self.onFavoritaClick,
-                         "initDBconScrapy" : self.initDBconScrapy,
+                         "initDBconScrapy_Mes" : self.initDBconScrapy_Mes,
+                         "initDBconScrapy_Year" : self.initDBconScrapy_Year,
+                         "initDBconScrapy_Todo" : self.initDBconScrapy_Todo,
                          "onImagenClick" : self.mostrarImagenGrande,
                          "onCloseImagenGrande" : self.onCloseImagenGrande, 
                          "editarConGimp" : self.editarConGimp,
@@ -109,16 +112,47 @@ class GUI:
         self.imagenesDescargadas = False
         self.rutaImagen = ""
         
-        image = self.builder.get_object("image1")
-        image.set_from_file('portada.jpg')
-        
+        # Mostramos la pantalla inicial
+        self.pantallaInicial()
+    
          # Establecemos la conexión con la base de datos
         self.tabla = Db(host='localhost', user=USUARIO,passwd=PASSWORD, db=BASEDATOS)
         
         self.window.show_all()
+        self.spinner.hide()
     
+    def calculaMesyYear(self):
+        """Calcula el mes y año actuales y los pasa a una tupla con cadenas """
+        fechaActual = datetime.date.today().__str__()
+        mes = fechaActual[5:7]
+        year = fechaActual[2:4]
         
-    def initDBconScrapy(self, *args):
+        return (mes, year)
+        
+    def initDBconScrapy_Mes(self, *args):
+        """ Prepara todo para la descarga de imagenes del mes actual con Scrapy """
+        mes, year = self.calculaMesyYear()
+        config['year'] =  year
+        config['mes'] = mes
+        config.write()
+        self.initDBconScrapy()
+ 
+    def initDBconScrapy_Year(self, *args):
+        """ Prepara todo para la descarga de imagenes del año actual con Scrapy """
+        mes, year = self.calculaMesyYear()
+        config['year'] = year
+        config['mes'] = ''
+        config.write()
+        self.initDBconScrapy()
+        
+    def initDBconScrapy_Todo(self, *args):
+        """ Prepara todo para la descarga de imagenes de todos los años con Scrapy """
+        config['year'] = ''
+        config['mes'] = ''
+        config.write()
+        self.initDBconScrapy()
+        
+    def initDBconScrapy(self):
         """ Inicializa la base de datos mediante una llamada a scrapy que descarga los datos de la web y los vuelca en la BD"""
         
         if not self.imagenesDescargadas :
@@ -152,8 +186,18 @@ class GUI:
         textview = self.builder.get_object("textview1")
         textview.set_wrap_mode(Gtk.WrapMode.WORD)
         explicacion = textview.get_buffer()
-        explicacion.set_text('Visor APOD')
+        textoInicio = """   
+        Lo primero que hay que hacer es comenzar con el proceso de descarga de las imagenes, para lo cual 
+        hay que hacer Archivo -> Iniciar descarga lo que pondra a trabajar a Scrapy bajando las imagenes.
+        
+        Este proceso de descarga solo hay que hacerlo la primera vez que abrimos el gestorGUI, una vez por cada base de datos.
+        Se informa con un mensaje en el toolbar cuando Scrapy acaba de descargarlas. 
+        
+        Es entonces cuando podemos empezar a ver las imagenes pulsando en los botones Adelante y Atras. 
+        Marcarlas como favoritas, verlas en tamaño grande o editarlas con Gimp. """
+        explicacion.set_text(textoInicio)
         image.set_from_file('portada.jpg')
+        self.window.show_all()
         
     def poblarItemsGUI(self, registro):
         """Rellena los campos del GUI con los datos del registro """
@@ -169,7 +213,7 @@ class GUI:
         favorita = self.builder.get_object("entry5")
         
         #Relleno los objetos del GUI con los datos del registro
-        ident.set_text(str(registro[0]))
+        ident.set_text(str(registro[0]) +  " de " + str(self.tabla.get_numero_imagenes()))
         titulo.set_text(str(registro[1]))
         fecha.set_text(str(registro[2]))
         texto_plano = str(registro[3])
@@ -246,7 +290,6 @@ class GUI:
         about.hide()
 
     
-
 def main():
     
     app = GUI()

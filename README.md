@@ -31,13 +31,15 @@ Además de los requisitos listados arriba es necesario disponer de un servidor
 Para crear la base de datos necesaria y configurar las carpetas de descarga solo hay que hacer funcionar el 
 configurador.py y rellenar los datos que se piden , en la contraseña hay que poner la del acceso al entorno mySQL.
 El configurador se encarga de crear la base de datos y de fijar las carpetas de destino 
-de las imagenes dentro de la carpeta de trabajo GUI.
+de las imagenes dentro de la carpeta Imagenes.
 
 Funcionamiento
 -----------
 Una vez hecho esto se cierra el configurador y se abre el gestorGUI.py , para poder empezar a trabajar con el mismo
 lo primero que hay que hacer es comenzar con el proceso de descarga de las imagenes, para lo cual hay que hacer 
 Archivo -> Iniciar descarga lo que pondrá a trabajar a Scrapy bajando las imagenes.
+
+Este proceso de descarga solo hay que hacerlo la primera vez que abrimos el gestorGUI, una vez por cada base de datos.
 
 Se informa con un mensaje en el toolbar cuando Scrapy acaba de descargarlas. Es entonces cuando podemos empezar a ver
 las imagenes pulsando en los botones Adelante y Atras. Marcarlas como favoritas, verlas en tamaño grande 

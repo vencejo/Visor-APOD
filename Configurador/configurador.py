@@ -6,6 +6,7 @@ import MySQLdb
 from gi.repository import Gtk
 import os, sys
 import configobj
+import subprocess
 
 #--------------------------------------------------
 # Clase encargada de gestionar la configuracion
@@ -87,10 +88,17 @@ class Configurador:
                     if line.find('IMAGES_STORE') == -1:
                         f.write(line)
                 f.write('IMAGES_STORE =' + "\"" + config['rutaImagenes'] + "\"")
+                f.close()
                 
-                #Notifica el exito de la operacion en la ventana
-                label.set_text("Base de Datos creada correctamente, ya puede cerrar esta ventana e inicar el visualizador")
-        
+                # oculta el configurador
+                self.VentanaConfiguracion.hide()
+    
+                #Inicio el gestorGUI
+                rutaActual = os.getcwd() 
+                rutaAGUI= rutaActual[0:-12] + 'GUI'
+                os.chdir(rutaAGUI)
+                subprocess.call('python gestorGUI.py', shell=True)
+                
     def onDeleteWindow(self, *args):
         Gtk.main_quit
         sys.exit()
