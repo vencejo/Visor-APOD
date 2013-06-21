@@ -46,6 +46,10 @@ Este programa pretende crear un visor offline en un entorno Gtk Linux de imagene
     <property name="border_width">5</property>
     <property name="type_hint">dialog</property>
     <signal name="close" handler="onCloseImagenGrande" swapped="no"/>
+    <signal name="destroy-event" handler="onCloseImagenGrande" swapped="no"/>
+    <signal name="delete-event" handler="onCloseImagenGrande" swapped="no"/>
+    <signal name="response" handler="onCloseImagenGrande" swapped="no"/>
+    <signal name="remove" handler="onCloseImagenGrande" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
         <property name="can_focus">False</property>
@@ -208,6 +212,31 @@ Este programa pretende crear un visor offline en un entorno Gtk Linux de imagene
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <signal name="activate" handler="onDeleteWindow" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem9">
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">ConfigurarDB</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu6">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkMenuItem" id="menuitem10">
+                        <property name="use_action_appearance">False</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Crear nueva Base de Datos</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="onNuevaDB" swapped="no"/>
                       </object>
                     </child>
                   </object>

@@ -90,14 +90,8 @@ class Configurador:
                 f.write('IMAGES_STORE =' + "\"" + config['rutaImagenes'] + "\"")
                 f.close()
                 
-                # oculta el configurador
-                self.VentanaConfiguracion.hide()
-    
-                #Inicio el gestorGUI
-                rutaActual = os.getcwd() 
-                rutaAGUI= rutaActual[0:-12] + 'GUI'
-                os.chdir(rutaAGUI)
-                subprocess.call('python gestorGUI.py', shell=True)
+                #Notifica el exito de la operacion en la ventana
+                label.set_text("Base de Datos creada correctamente, ya puede cerrar esta ventana e inicar el visualizador")
                 
     def onDeleteWindow(self, *args):
         Gtk.main_quit

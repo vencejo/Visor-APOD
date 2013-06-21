@@ -91,6 +91,7 @@ class GUI:
         self.builder = Gtk.Builder()
         self.builder.add_from_file("gui.glade")
         self.handlers = {"onDeleteWindow": self.onDeleteWindow ,
+                         "onNuevaDB": self.onNuevaDB,
                          "onOpenAbout": self.onOpenAbout,
                          "onCloseAbout": self.onCloseAbout,
                          "onAdelanteClick" : self.onAdelanteClick,
@@ -120,6 +121,13 @@ class GUI:
         
         self.window.show_all()
         self.spinner.hide()
+        
+    def onNuevaDB(self, *args):
+         #Inicio el configurador
+        rutaActual = os.getcwd() 
+        rutaAconf= rutaActual[0:-3] + 'Configurador'
+        os.chdir(rutaAconf)
+        subprocess.call('python configurador.py', shell=True)
     
     def calculaMesyYear(self):
         """Calcula el mes y año actuales y los pasa a una tupla con cadenas """
@@ -186,12 +194,16 @@ class GUI:
         textview = self.builder.get_object("textview1")
         textview.set_wrap_mode(Gtk.WrapMode.WORD)
         explicacion = textview.get_buffer()
-        textoInicio = """   
-        Lo primero que hay que hacer es comenzar con el proceso de descarga de las imagenes, para lo cual 
+        textoInicio = """  
+        Si es la primera vez que usas el programa tienes que crear la base de datos donde se guardará la informaricón de las 
+        imagenes. Para ello tienes que clickar en configurarDB y seguir las instrucciones. Ten en cuenta que para que funcione 
+        hay que tener instaldado MySQL  
+        
+        Tras esto ya podemos comenzar con el proceso de descarga de las imagenes, para lo cual 
         hay que hacer Archivo -> Iniciar descarga lo que pondra a trabajar a Scrapy bajando las imagenes.
         
         Este proceso de descarga solo hay que hacerlo la primera vez que abrimos el gestorGUI, una vez por cada base de datos.
-        Se informa con un mensaje en el toolbar cuando Scrapy acaba de descargarlas. 
+        Se informa con un mensaje en la barra de estado cuando Scrapy acaba de descargarlas. 
         
         Es entonces cuando podemos empezar a ver las imagenes pulsando en los botones Adelante y Atras. 
         Marcarlas como favoritas, verlas en tamaño grande o editarlas con Gimp. """
