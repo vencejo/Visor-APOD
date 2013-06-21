@@ -16,7 +16,7 @@ PASSWORD = config['passwordDB']
 
 RUTAIMAGENESGRANDES = config['rutaImagenes'] + "/"
 RUTAIMAGENESMEDIANAS = RUTAIMAGENESGRANDES + '/thumbs/medianas/'
-RUTADESCRAPY = config['rutaImagenes'][0:-3] + 'APOD_scrapy'
+RUTADESCRAPY = config['rutaImagenes'][0:-8] + 'APOD_scrapy'
  
 #--------------------------------------------------
 # Clase encargada de gestionar la Base de datos
