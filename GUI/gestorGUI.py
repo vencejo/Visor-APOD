@@ -201,9 +201,8 @@ class GUI:
         textview = self.builder.get_object("textview1")
         textview.set_wrap_mode(Gtk.WrapMode.WORD)
         explicacion = textview.get_buffer()
-        textoInicio = """  Si es la primera vez que usas el programa tienes que crear la base de datos donde se guardará la información de las 
-        imagenes. Para ello tienes que clickar en configurarDB y seguir las instrucciones. Ten en cuenta que para que funcione 
-        hay que tener instaldado MySQL  
+        textoInicio = """ Si no lo has echo ya o  si quieres crear una nueva Base de Datos para las imagenes pincha en 
+        configurarDB y sigue las instrucciones. Ten en cuenta que para que funcione hay que tener instaldado MySQL  
         
         Tras esto ya podemos comenzar con el proceso de descarga de las imagenes, para lo cual 
         hay que hacer Archivo -> Iniciar descarga lo que pondra a trabajar a Scrapy bajando las imagenes.
