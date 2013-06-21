@@ -55,7 +55,7 @@ Si eliges descargar todas las imágenes APOD tienes que armarte de espacio (tene
 Nota sobre la implementación
 -----------
 Los diferentes scripts se comunican entre si mediante el archivo configuracion.ini. 
-Así configurador.py se encarga de generarlo y es consultado tanto por el gestorGUI como 
+Así configurador.py se encarga de generarlo y es consultado tanto por el gestorGUI como.
 por Scrapy para ver donde coger o dejar las imágenes y los parámetros de la Base de Datos.
 
 Errores detectados

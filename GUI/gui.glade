@@ -295,6 +295,41 @@ Este programa pretende crear un visor offline en un entorno Gtk Linux de imagene
               </object>
             </child>
             <child>
+              <object class="GtkMenuItem" id="Widget">
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Widget</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu7">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkMenuItem" id="menuitem11">
+                        <property name="use_action_appearance">False</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Iniciar Widget</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="onIniciarWidget" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuitem12">
+                        <property name="use_action_appearance">False</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Parar Widget</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="onPararWidget" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
               <object class="GtkMenuItem" id="menuitem4">
                 <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
@@ -433,7 +468,7 @@ Este programa pretende crear un visor offline en un entorno Gtk Linux de imagene
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="padding">10</property>
+            <property name="padding">4</property>
             <property name="position">4</property>
           </packing>
         </child>
@@ -446,6 +481,7 @@ Este programa pretende crear un visor offline en un entorno Gtk Linux de imagene
               <object class="GtkLabel" id="label3">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="yalign">0.49000000953674316</property>
                 <property name="label" translatable="yes">Explicación</property>
               </object>
               <packing>
@@ -599,7 +635,7 @@ Este programa pretende crear un visor offline en un entorno Gtk Linux de imagene
           <packing>
             <property name="expand">True</property>
             <property name="fill">True</property>
-            <property name="padding">12</property>
+            <property name="padding">6</property>
             <property name="position">6</property>
           </packing>
         </child>

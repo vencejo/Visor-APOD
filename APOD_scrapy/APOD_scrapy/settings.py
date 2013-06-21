@@ -19,6 +19,7 @@ ITEM_PIPELINES = ['APOD_scrapy.pipelines.MyImagesPipeline',
 
 IMAGES_THUMBS = {
     'medianas': (600, 400),
+    'chicas' : (200, 200),
 }
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'APOD_scrapy (http://osl.ugr)'

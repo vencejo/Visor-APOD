@@ -5,7 +5,7 @@
 import MySQLdb
 from gi.repository import Gtk
 import os, sys
-import configobj
+from configobj import ConfigObj
 import subprocess
 
 #--------------------------------------------------
@@ -69,15 +69,14 @@ class Configurador:
             #comprueba si la BD se ha creado correctamente, en cuyo caso escribe los datos de acceso a la misma en el archivo de configuracion
             if self.compruebaDb(nombreDB):
                 #escribe los datos de la BD en el archivo de configuracion.ini
-                config = configobj.ConfigObj()
-                config.filename = 'configuracion.ini'
+                config = ConfigObj('configuracion.ini')
+        
                 config["nombreDB"] = nombreDB
                 config["usuarioDB"] = usuarioDB
                 config["passwordDB"]= passwordDB
-                #escribe la ruta de guardado de las imagenes
-                config['rutaImagenes'] = os.getcwd()[0:-12] + 'Imagenes' 
+                config['porEstrenar'] = 'no'
                 config.write()
-                
+               
                 #Modifica el archivo settings.py del scrapy para decirle donde tiene que guardar las imagenes
                 filename = os.getcwd()[0:-12] + 'APOD_scrapy/APOD_scrapy/settings.py'
                 f = open(filename,"r")
@@ -87,7 +86,7 @@ class Configurador:
                 for line in lines:
                     if line.find('IMAGES_STORE') == -1:
                         f.write(line)
-                f.write('IMAGES_STORE =' + "\"" + config['rutaImagenes'] + "\"")
+                f.write('IMAGES_STORE =' + "\"" + config['rutaRaiz'] + "/Imagenes" + "\"")
                 f.close()
                 
                 #Notifica el exito de la operacion en la ventana

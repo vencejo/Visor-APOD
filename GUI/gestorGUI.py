@@ -6,6 +6,7 @@ from gi.repository import Gtk
 import os, sys, subprocess
 from configobj import ConfigObj
 import datetime
+import signal 
 
 rutaActual = os.getcwd() 
 rutaAconfiguracion = rutaActual[0:-3] + 'Configurador/configuracion.ini'
@@ -15,9 +16,9 @@ BASEDATOS = config['nombreDB']
 USUARIO = config['usuarioDB']
 PASSWORD = config['passwordDB']
 
-RUTAIMAGENESGRANDES = config['rutaImagenes'] + "/"
+RUTAIMAGENESGRANDES = config['rutaRaiz']+ "/Imagenes/"
 RUTAIMAGENESMEDIANAS = RUTAIMAGENESGRANDES + '/thumbs/medianas/'
-RUTADESCRAPY = config['rutaImagenes'][0:-8] + 'APOD_scrapy'
+RUTADESCRAPY = config['rutaRaiz'] + '/APOD_scrapy'
  
 #--------------------------------------------------
 # Clase encargada de gestionar la Base de datos
@@ -103,6 +104,8 @@ class GUI:
                          "onImagenClick" : self.mostrarImagenGrande,
                          "onCloseImagenGrande" : self.onCloseImagenGrande, 
                          "editarConGimp" : self.editarConGimp,
+                         "onIniciarWidget" : self.onIniciarWidget,
+                         "onPararWidget": self. onPararWidget,
                          }
         self.builder.connect_signals(self.handlers)
         
@@ -112,11 +115,12 @@ class GUI:
         self.spinner = self.builder.get_object("spinner1")
         self.imagenesDescargadas = False
         self.rutaImagen = ""
+        self.procesoWidget = 0
         
         # Mostramos la pantalla inicial
         self.pantallaInicial()
-    
-         # Establecemos la conexión con la base de datos
+        
+        #Conectamos a la BD
         self.tabla = Db(host='localhost', user=USUARIO,passwd=PASSWORD, db=BASEDATOS)
         
         self.window.show_all()
@@ -127,7 +131,10 @@ class GUI:
         rutaActual = os.getcwd() 
         rutaAconf= rutaActual[0:-3] + 'Configurador'
         os.chdir(rutaAconf)
-        subprocess.call('python configurador.py', shell=True)
+        args = [ 'python', 'configurador.py']
+        subproceso = subprocess.Popen(args)
+        #Espero a que acabe el subproceso
+        subproceso.wait()
     
     def calculaMesyYear(self):
         """Calcula el mes y año actuales y los pasa a una tupla con cadenas """
@@ -194,14 +201,12 @@ class GUI:
         textview = self.builder.get_object("textview1")
         textview.set_wrap_mode(Gtk.WrapMode.WORD)
         explicacion = textview.get_buffer()
-        textoInicio = """  
-        Si es la primera vez que usas el programa tienes que crear la base de datos donde se guardará la informaricón de las 
+        textoInicio = """  Si es la primera vez que usas el programa tienes que crear la base de datos donde se guardará la información de las 
         imagenes. Para ello tienes que clickar en configurarDB y seguir las instrucciones. Ten en cuenta que para que funcione 
         hay que tener instaldado MySQL  
         
         Tras esto ya podemos comenzar con el proceso de descarga de las imagenes, para lo cual 
         hay que hacer Archivo -> Iniciar descarga lo que pondra a trabajar a Scrapy bajando las imagenes.
-        
         Este proceso de descarga solo hay que hacerlo la primera vez que abrimos el gestorGUI, una vez por cada base de datos.
         Se informa con un mensaje en la barra de estado cuando Scrapy acaba de descargarlas. 
         
@@ -236,6 +241,7 @@ class GUI:
             favorita.set_text('Lo es')
             
         self.rutaImagen = str(registro[4])
+        print self.rutaImagen
         ruta =  RUTAIMAGENESMEDIANAS + self.rutaImagen[4:]
         image.set_from_file(ruta)
         
@@ -273,7 +279,6 @@ class GUI:
     def mostrarImagenGrande(self, *args):
         
         if self.rutaImagen:
-            
             imagenGrande = self.builder.get_object("imagenGrande")
             ruta =  RUTAIMAGENESGRANDES + self.rutaImagen 
             imagenGrande.set_from_file(ruta)
@@ -285,9 +290,22 @@ class GUI:
     def editarConGimp(self, *args):
         
         if self.rutaImagen:
-            ruta =  RUTAIMAGENESGRANDES + self.rutaImagen
+            
+            ruta =  config['rutaRaiz']+ "/Imagenes/" + self.rutaImagen
+            print ruta
             comando = 'gimp ' + ruta
             subprocess.call(comando, shell=True)
+            
+    def onIniciarWidget(self, *args):
+        #Inicio el widget
+        rutaActual = os.getcwd() 
+        rutaAwidget= config['rutaRaiz'] + '/Widget'
+        os.chdir(rutaAwidget)
+        self.procesoWidget = subprocess.Popen(['python','widget.py'],stdin=subprocess.PIPE)
+        
+    def onPararWidget(self, *args):
+        self.procesoWidget.kill()
+        
         
     def onDeleteWindow(self, *args):
         Gtk.main_quit
