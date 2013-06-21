@@ -6,7 +6,9 @@ from gi.repository import Gtk
 import os, sys, subprocess
 from configobj import ConfigObj
 
-config = ConfigObj(r"configuracion.ini")
+rutaActual = os.getcwd() 
+rutaAconfiguracion = rutaActual[0:-3] + 'Configurador/configuracion.ini'
+config = ConfigObj(rutaAconfiguracion)
 
 BASEDATOS = config['nombreDB']
 USUARIO = config['usuarioDB']

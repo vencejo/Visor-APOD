@@ -21,7 +21,7 @@ from configobj import ConfigObj
 
 rutaActual = os.getcwd() 
 
-rutaAconfiguracion = rutaActual[0:-12] + '/GUI/configuracion.ini'
+rutaAconfiguracion = rutaActual[0:-12] + '/Configurador/configuracion.ini'
 print ""
 print rutaAconfiguracion
 print ""

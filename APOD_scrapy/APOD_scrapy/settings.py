@@ -22,4 +22,4 @@ IMAGES_THUMBS = {
 }
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'APOD_scrapy (http://osl.ugr)'
-IMAGES_STORE ="/home/dj/Escritorio/Proyecto final curso/Visor APOD/GUI"
+IMAGES_STORE ="/home/dj/Escritorio/Proyecto final curso/Visor APOD/Imagenes"
