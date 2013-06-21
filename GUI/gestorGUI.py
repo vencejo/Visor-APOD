@@ -241,7 +241,6 @@ class GUI:
             favorita.set_text('Lo es')
             
         self.rutaImagen = str(registro[4])
-        print self.rutaImagen
         ruta =  RUTAIMAGENESMEDIANAS + self.rutaImagen[4:]
         image.set_from_file(ruta)
         
@@ -290,11 +289,8 @@ class GUI:
     def editarConGimp(self, *args):
         
         if self.rutaImagen:
-            
-            ruta =  config['rutaRaiz']+ "/Imagenes/" + self.rutaImagen
-            print ruta
-            comando = 'gimp ' + ruta
-            subprocess.call(comando, shell=True)
+            ruta =  RUTAIMAGENESGRANDES + self.rutaImagen
+            subprocess.Popen(['gimp', ruta])
             
     def onIniciarWidget(self, *args):
         #Inicio el widget
